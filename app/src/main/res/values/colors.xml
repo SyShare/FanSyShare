@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2c2c2c</color>
+    <color name="colorPrimaryDark">#2c2c2c</color>
+    <color name="statusBarColor">#01000000</color>
+    <color name="themeStartColor">#f8c05a</color>
+    <color name="themeEndColor">#f8c05a</color>
+    <!--general-->
+    <color name="activity_background">#f3f6f9</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#ff000000</color>
+    <color name="black_10">#19000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_30">#4c000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_50">#7f000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_70">#b2000000</color>
+    <color name="black_80">#cc000000</color>
+    <color name="black_90">#e5000000</color>
+    <color name="colorText_878787">#878787</color>
+    <color name="colorText_80_878787">#cc878787</color>
+    <color name="colorText_4c4c4c">#4c4c4c</color>
+    <color name="profile_item_append">#ffb54b</color>
+    <color name="colorText_3b3b3b">#3b3b3b</color>
+    <color name="themeTextColor">#ff4f6a</color>
+    <color name="color_888888">#888888</color>
+    <color name="color_b5b5b5">#b5b5b5</color>
+    <color name="colorNotice">#ff6550</color>
+    <color name="colorDivider_cccccc">#cccccc</color>
+    <color name="MaskBackgroundDark">#80000000</color>
+    <color name="color_fafafa">#fafafa</color>
+    <color name="color_fafbfb">#fafbfb</color>
+    <color name="colorText_763b35">#763b35</color>
+    <color name="color_aeaeae">#aeaeae</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_dddddd">#dddddd</color>
+    <color name="color_red">#ff4d44</color>
+    <color name="color_333333">#333333</color>
+    <color name="white_30">#4cffffff</color>
+    <color name="white_50">#7fffffff</color>
+    <color name="white_70">#b2ffffff</color>
+    <color name="color_ff5763">#ff5763</color>
+    <color name="color_855d5d5d">#855d5d5d</color>
+    <color name="color_ff3356">#ff3356</color>
+    <color name="color_ff3e93">#ff3e93</color>
+    <color name="color_main">#ffda44</color>
+    <color name="color_fef200">#fef200</color>
+    <color name="color_ff3e53">#ff3e53</color>
+    <color name="color_d8d8d8">#d8d8d8</color>
+    <color name="color_8c8c8c">#8c8c8c</color>
+    <color name="color_fafaff">#fafaff</color>
+    <color name="color_c9c9c9">#c9c9c9</color>
+    <color name="color_d3d3d3">#d3d3d3</color>
+    <color name="big_avatar_status">#2000</color>
+
+    <!--list-->
+    <color name="list_empty_color">#aeaeae</color>
+    <color name="list_background_color">#f6f6f6</color>
+    <color name="divider_line">#d3d3d3</color>
+
+    <!--text-->
+    <color name="colorTextPrimary">#4c4c4c</color>
+    <color name="textColor_8b8b8b">#8b8b8b</color>
+
+    <color name="live_bg1_1">#ffe45e</color>
+
+    <color name="header_border_color">#80ffffff</color>
+    <color name="user_card">#fafafa</color>
+    <color name="user_card_divider_line">#dddddd</color>
+
+    <color name="report_txt">#919aa5</color>
+    <color name="bottom_txt">#333333</color>
+
+    <!--用户卡片-->
+    <color name="view_user_card_bg">#fed253</color>
+    <color name="view_user_card_fg">#fee269</color>
+    <color name="color_ffa200">#ffa200</color>
+
+    <!--直播间-->
+    <color name="live_recharge">#de9910</color>
+    <color name="live_recharge_btn">#fffef3</color>
+    <color name="start_game_subtitle_color">#dbf4ff</color>
+
+
+    <!--娃娃记录-->
+    <color name="tab_normal">#9D5a342b</color>
+    <color name="tab_selected">#5a342b</color>
+    <color name="divider_line_height">#ffe16f</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_444444">#444444</color>
+    <color name="doll_stroke_light">#fff2bd</color>
+    <color name="doll_stroke_dark">#fde686</color>
+
+    <!---->
+    <color name="color_stroke">#c1c1c1</color>
+    <!--danmaku-->
+    <color name="color_fbd972">#fbd972</color>
+    <color name="color_6abffb">#6abffb</color>
+    <color name="office_live_female">#fd7a9f</color>
+    <color name="office_live_male">#5f9cf8</color>
+    <color name="colorLiveBackground">#4c000000</color>
+    <color name="color_ffea87">#ffea87</color>
+
+    <!--个人中心-->
+    <color name="color_ffda44">#ffda44</color>
+    <color name="color_eaeaea">#eaeaea</color>
+    <color name="person_level_color">#763b35</color>
+
+    <!--我的娃娃管理-->
+    <color name="color_59c6f7">#59c6f7</color>
+    <color name="color_4bc">#4bccac</color>
+    <color name="color_f5ba1a">#f5ba1a</color>
+
+
+    <!--启动页及登录页-->
+    <color name="login_btn">#2fe07f</color>
+    <color name="splash_guide_radius_selected">#ffffd953</color>
+    <color name="splash_guide_radius_unselected">#7fffd953</color>
+    <color name="splash_guide_btn">#6ac4f6</color>
+
+    <!--物流详情-->
+    <color name="express_time_line_node_selected">#2ce880</color>
+    <color name="express_text_selected">#1ed771</color>
+    <color name="express_status_text">#5a342b</color>
+    <color name="express_info_top_text">#e5a930</color>
+    <color name="express_tel_color">#5cabff</color>
+    <color name="express_doll_bg_stroke">#ffd236</color>
+
+    <!--我的战利品-->
+    <color name="bg_display_start">#fff373</color>
+    <color name="bg_display_end">#ffea74</color>
+    <color name="doll_num">#cb8121</color>
+    <color name="text_room_toast">#fb9b13</color>
+
+    <!--娃娃碎片-->
+    <color name="text_doll_fragments">#8d5c30</color>
+
+    <!--游戏记录-->
+    <color name="status_success_bg">#3872f5f0</color>
+    <color name="status_success">#72f3f5</color>
+    <color name="status_failed_bg">#F3F3F3</color>
+    <color name="status_failed">#ff8b9e</color>
+
+    <!--首页-->
+    <color name="room_state_replenishment">#ffae00</color>
+    <color name="room_state_idle">#0FB700</color>
+    <color name="room_state_busy">#E90000</color>
+
+    <!--连续登陆-->
+    <color name="color_df7628">#fe8300</color>
+    <color name="color_80ec7217">#80ec7217</color>
+    <color name="color_c0914b">#c0914b</color>
+
+    <!--游戏结果-->
+    <color name="game_result_award">#572b10</color>
+    <color name="catch_result_yes_name_color">#f1810a</color>
+    <color name="catch_result_no_name_color">#ff6b11</color>
+    <color name="catch_result_success_num">#c58744</color>
+    <color name="color_game_subtext">#825516</color>
+    <color name="notice_bg">#f8dd70</color>
+
+    <!--动态头像-->
+    <color name="color_dynamic_text_grabbing_bg">#fdf2c4</color>
+    <color name="color_dynamic_text_grab_success_bg">#fecdc5</color>
+    <color name="color_dynamic_text_grab_fail_bg">#dff7fb</color>
+    <color name="danmu_notice_color">#fe4850</color>
+
+    <!--首页刷新-->
+    <color name="color_home_refresh_bg">#ccf1f7</color>
+    <color name="color_personal_refresh_bg">#fff273</color>
+
+    <color name="color_ff5028">#ff5028</color>
+    <color name="border_color_share">#0f3692e8</color>
+    <color name="prize_color_res">#ff5a91</color>
+    <color name="prize_coin_num">#f62269</color>
+    <color name="item_home_coin">#5e5e5e</color>
+    <color name="indicator_start_color">#ffd637</color>
+    <color name="indicator_end_color">#ffbf27</color>
+    <color name="color_5e5e5e">#5e5e5e</color>
+    <color name="color_723216">#723216</color>
+
+    <!--投注选择-->
+    <color name="color_normal">#1fc2ff</color>
+    <color name="color_betting_type">#ff54c0</color>
+    <color name="color_unselected_bonusTimes">#e2c6ff</color>
+    <color name="pinball_trend_empty_text_color">#ff3875</color>
+    <color name="pinball_trend_line_color">#4cbef9</color>
+    <color name="pinball_trend_item_bg_01">#ffffff</color>
+    <color name="pinball_trend_item_bg_02">#f9f9f9</color>
+    <color name="divider_line_betting_color">#9300ff</color>
+    <!--状态栏颜色-->
+    <color name="status_bar_home">#a7e3ef</color>
+    <color name="status_bar_pinball">#2d1361</color>
+    <color name="status_bar_web">#ffe859</color>
+    <color name="status_bar_hero_rank">#404b99</color>
+    <color name="text_pinball">#f047ff</color>
+    <color name="text_pinball_display">#ff4dd3</color>
+    <color name="bag_name_stroke_color">#af4910</color>
+    <color name="color_ff56f5">#ff56f5</color>
+
+    <!--分享-->
+    <color name="share_desc_tv">#664034</color>
+    <color name="share_background_top">#ffe744</color>
+    <color name="share_background_bottom">#feca2b</color>
+
+    <!--进房通知-->
+    <color name="live_room_enter_default_start_color">#a23bf9</color>
+    <color name="live_room_enter_default_end_color">#004c89f8</color>
+
+    <!--等级升级-->
+    <color name="level_upgrade_color">#98420a</color>
+    <color name="level_upgrade_exp_color">#946a24</color>
+    <color name="level_upgrade_desc_color">#fbfbfb</color>
+
+    <color name="level_upgrade_newer_start_color">#a6957c</color>
+    <color name="level_upgrade_newer_end_color">#a6957c</color>
+    <color name="level_upgrade_bronze_start_color">#b7914c</color>
+    <color name="level_upgrade_bronze_end_color">#bb812f</color>
+    <color name="level_upgrade_silver_start_color">#2ab2d9</color>
+    <color name="level_upgrade_silver_end_color">#43cdbb</color>
+    <color name="level_upgrade_gold_start_color">#f46311</color>
+    <color name="level_upgrade_gold_end_color">#f49e11</color>
+    <color name="level_upgrade_platinum_start_color">#6969f3</color>
+    <color name="level_upgrade_platinum_end_color">#6985f2</color>
+    <color name="level_upgrade_diamonds_start_color">#7b6fff</color>
+    <color name="level_upgrade_diamonds_end_color">#a76cff</color>
+    <color name="level_upgrade_king_start_color">#fa3b95</color>
+    <color name="level_upgrade_king_end_color">#fc65ab</color>
+
+    <color name="level_progress_bg_bronze">#cc903b</color>
+    <color name="level_progress_bg_silver">#34c0cd</color>
+    <color name="level_progress_bg_gold">#f45c11</color>
+    <color name="level_progress_bg_platinum">#6969f3</color>
+    <color name="level_progress_bg_diamonds">#946dff</color>
+    <color name="level_progress_bg_king">#fb53a1</color>
+
+    <color name="pinball_activity_bg">#2d1361</color>
+    <color name="account_safety_tips">#f42914</color>
+
+    <color name="main_cb_new_prize_color">#006cff</color>
+
+
+    <!--我的选品-->
+    <color name="taste_red_point_color">#ff6473</color>
+
+    <color name="prize_coin_color">#ef7e1f</color>
+    <color name="guide_ww_manager_confirm_color">#ffba00</color>
+
+    <color name="instead_record">#bd502711</color>
+    <color name="week_card">#fff254</color>
+    <color name="week_card_give">#c8e1ff</color>
+    <color name="month_card_give">#ffe2e6</color>
+    <color name="week_card_divider">#9b246be0</color>
+    <color name="month_card_divider">#9be7485f</color>
+
+    <!--<color name="shadow_week_get_now">#80009bdf</color>-->
+    <!--<color name="shadow_month_get_now">#b2dd586b</color>-->
+    <color name="shadow_week_get_now">#80666666</color>
+    <color name="shadow_month_get_now">#80666666</color>
+
+    <!--海盗首页-->
+    <color name="ww_list_bg_color">#F6FDFF</color>
+    <color name="hd_home_list_title">#FFD92D</color>
+
+
+    <!--限时折扣背景-->
+    <color name="room_active_discount_bg01">#c92fea</color>
+    <color name="room_active_discount_bg02">#563dce</color>
+    <color name="room_active_time_text">#feef35</color>
+    <color name="dialog_doll_name_text">#fce5aa</color>
+
+    <!--新手引导逻辑-->
+    <color name="guide_text_color">#8E5115</color>
+
+
+    <!--更新弹窗-->
+    <color name="update_dialog_title_color">#6CA3E7</color>
+    <color name="update_dialog_release_version_color">#8AB4E9</color>
+
+    <!--房间背包弹窗-->
+    <color name="room_prop_use_title_text">#90400A</color>
+    <color name="modify_nickname_title_color">#518dc6</color>
+    <color name="modify_nickname_content_color">#69a5cf</color>
+    <color name="home_item_bg">#fffef3</color>
+
+    <color name="update_text">#6ca3e7</color>
+    <color name="update_info">#8ab4e9</color>
+
+    <color name="debris_source">#fd6a1f</color>
+    <color name="level_up_content_color">#fffbdb</color>
+    <color name="flush_color">#da8529</color>
+    <color name="order_content_tv_color">#f3d57f</color>
+    <color name="order_hint_content_tv_color">#fff7e0</color>
+
+    <color name="live_hot_word_bg">#f220a7fd</color>
+    <color name="live_hot_word_item_bg">#167bb3</color>
+
+    <color name="color_BB0000000">#BB000000</color>
+
+</resources>

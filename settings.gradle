@@ -1,0 +1,6 @@
+include ':app', ':permission', ':lib-http'
+include ':base'
+include ':core'
+include ':util'
+include ':logger'
+include ':permission'

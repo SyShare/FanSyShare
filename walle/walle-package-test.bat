@@ -1,0 +1,12 @@
+@if "%DEBUG%" == "" @echo off
+
+@rem ##########################################################################
+@rem
+@rem  Walle package script for Windows
+@rem
+@rem ##########################################################################
+
+cd %~dp0
+cd ..
+
+.\gradlew.bat --stacktrace clean assembleReleaseChannels -PchannelList=test

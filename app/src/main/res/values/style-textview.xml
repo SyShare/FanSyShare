@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--===========  9  ================================================== -->
+    <style name="Text9White">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!--===========  10  ================================================== -->
+    <style name="Text10White">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--===========  11   ================================================== -->
+    <style name="Text11White">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="Text11DarkGray">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/colorText_4c4c4c</item>
+    </style>
+
+    <style name="Text763b35_11">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#763b35</item>
+    </style>
+
+    <style name="Text11For4444">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/color_444444</item>
+    </style>
+
+    <style name="BettingCostStyle">
+        <item name="android:textColor">#e2c6ff</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+
+    <!--===========  12   ================================================== -->
+    <style name="Text12White">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="BettingTipsStyle">
+        <item name="android:textColor">#b873ff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="Text5a342b">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#5a342b</item>
+    </style>
+
+    <style name="Text12Theme">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorText_4c4c4c</item>
+    </style>
+
+    <style name="Text12DarkGray">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorText_4c4c4c</item>
+    </style>
+
+    <style name="Text12Gray">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorText_878787</item>
+    </style>
+
+    <style name="Text12For4444">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/color_444444</item>
+    </style>
+
+    <!--===========  13   ================================================== -->
+    <style name="Text13White">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text13For4444">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/color_444444</item>
+    </style>
+
+    <!--===========  14   ================================================== -->
+    <style name="Text14White">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text14For4444">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_444444</item>
+    </style>
+
+    <style name="Text14DarkGray">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorText_4c4c4c</item>
+    </style>
+
+    <style name="Text14Gray">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorText_878787</item>
+    </style>
+
+    <!--===========  15   =================================================== -->
+    <style name="Text15White">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text15DarkGray">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorText_4c4c4c</item>
+    </style>
+
+
+    <style name="BettingTextStyle">
+        <item name="android:textColor">#dd6a00</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <!--===========  16   =================================================== -->
+    <style name="Text16White">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--===========  17   =================================================== -->
+    <style name="Text17White">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--===========  19  =================================================== -->
+    <style name="BettingResultStyle">
+        <item name="android:textColor">#eed6ff</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--===========  24   =================================================== -->
+    <style name="Text763b35_24">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#763b35</item>
+    </style>
+
+    <style name="danmu_style">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+
+    <style name="task_login">
+        <item name="android:textColor">#f3fffd</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="task_login_add_coin">
+        <item name="android:textColor">#af3a11</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_category_title">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/hd_home_list_title</item>
+    </style>
+
+
+
+</resources>

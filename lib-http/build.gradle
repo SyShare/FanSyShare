@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion depends.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion depends.minSdkVersion
+        targetSdkVersion depends.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation depends.appcompat_v7()
+    api depends.retrofit()
+    api depends.retrofit_gson()
+    api depends.retrofit_rxjava_adapter()
+    api depends.rxjava2()
+    api depends.commons_io()
+    api depends.rxjava2()
+    api depends.rxandroid2()
+    api depends.okhttp()
+    api depends.okhttp_log()
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}

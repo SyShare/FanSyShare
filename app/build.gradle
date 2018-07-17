@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'walle'
+apply plugin: 'com.jakewharton.hugo'
+
+android {
+
+    signingConfigs {
+        config {
+            keyAlias 'keystore'
+            keyPassword '123456'
+            storeFile file('keystore.jks')
+            storePassword '123456'
+        }
+    }
+
+    compileSdkVersion depends.compileSdkVersion
+    defaultConfig {
+        applicationId "sy.com.initproject"
+        minSdkVersion depends.minSdkVersion
+        targetSdkVersion depends.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        signingConfig signingConfigs.config
+        multiDexEnabled true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {//对lambda的支持
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            debuggable false
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    //工具库
+    implementation project(':base')
+    implementation project(':core')
+    implementation project(':logger')
+    implementation project(':util')
+    implementation project(':lib-http')
+
+    //依赖库
+    implementation depends.baseadapter()
+    implementation depends.cardview_v7()
+    implementation depends.glide()
+
+   implementation ('com.alibaba.android:vlayout:1.2.8@aar'){
+       transitive = false
+   }
+}

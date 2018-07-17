@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ToolbarTheme" parent="BaseToolbar">
+        <item name="background">@drawable/app_theme_drawable</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleStyle</item>
+        <item name="subtitleTextAppearance">@style/ToolbarSubTitleStyle</item>
+    </style>
+
+    <style name="ToolbarLight" parent="BaseToolbar">
+        <item name="background">@color/white</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleStyle</item>
+        <item name="subtitleTextAppearance">@style/ToolbarSubTitleStyle</item>
+    </style>
+
+    <style name="ToolbarDark" parent="BaseToolbar">
+        <item name="background">@color/colorPrimaryDark</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleStyle</item>
+        <item name="subtitleTextAppearance">@style/ToolbarSubTitleStyle</item>
+    </style>
+
+    <style name="ToolbarTitleStyle" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/color_444444</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ToolbarSubTitleStyle" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/color_444444</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

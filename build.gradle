@@ -1,0 +1,65 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.30'
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        maven {
+            url  "https://dl.bintray.com/sharebysy/Depend"
+        }
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        //walle打包插件
+        classpath 'com.meituan.android.walle:plugin:1.1.6'
+        //统一依赖插件
+        classpath 'com.depend:depes:1.0.2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        //用于方便调试性能问题的打印插件。给访法加上@DebugLog，就能输出该方法的调用参数，以及执行时间
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
+    }
+}
+
+allprojects {
+    apply plugin: 'com.depend'
+
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        maven {
+            url "https://dl.bintray.com/sharebysy/Depend"
+        }
+        google()
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            force depends.appcompat_v7()
+            force depends.support_v4()
+            force depends.design()
+            force depends.constraintLayout('1.0.2')
+            force depends.glide('4.7.1')
+            force depends.glide_apt('4.7.1')
+            force depends.glide_okhttp_integration('4.7.1')
+
+            force 'com.android.support:support-annotations:27.1.1'
+
+            force 'android.arch.core:common:1.1.1'
+            force 'android.arch.core:runtime:1.1.1'
+            force 'android.arch.lifecycle:common:1.1.1'
+            force 'android.arch.lifecycle:runtime:1.1.1'
+            force 'android.arch.lifecycle:livedata-core:1.1.1'
+            force 'android.arch.lifecycle:viewmodel:1.1.1'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,4 @@
+hdwawa,qq,m360,xiaomi,weibo,baidu,wandoujia,oppo,vivo,pp,meizu,samsung,xiazaizhan,wo-unicom,googleplay,yingyonghui,anzhi,zybj01,zybj02,zybj03,zybj04,zybj05,zybj06,zybj07,zybj08,zybj09,zybj10,zybj11,zybj12,zybj13,zybj14,zybj15,zybj17,zybj18,zybj19,zybj20,zybj21,zybj22,zybj23,zybj24,zybj25,zybj26,zybj27,zybj28,zybj29,zybj30,gfan,sougou,email163,coolpai,yixin,nduo,youyi,liqu,suning,anfen,smartisan,lenovo,m10086,m189,le,dangle,haixin,mlq,shsp,mlq2,raw,lly,jmj,lly2,lly3,lly4,lly5,wckj,qwkj,xkx,bjgz,chan.you,xianerjia,agg,bjww,bjwr1,bjgs1,lslq.1,lslq.2,bjgs3,xej4,drhda,hxt,huawei,jinli
+
+2018/06/27 目前只需要下面这些渠道包（若添加新的，直接加在下面，注意格式','分隔）
+hdwawa,qq,m360,xiaomi,weibo,baidu,wandoujia,oppo,vivo,meizu,samsung

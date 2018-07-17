@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion depends.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion depends.minSdkVersion
+        targetSdkVersion depends.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    api 'com.elvishew:xlog:1.4.0'
+    api 'com.orhanobut:logger:2.2.0'
+}

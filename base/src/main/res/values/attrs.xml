@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="App_Attrs">
+        <!--自定义全局toolbar样式-->
+        <attr name="toolbarStyle" format="reference"></attr>
+        <!--自定义全局tablayout样式-->
+        <attr name="tablayoutStyle" format="reference"></attr>
+        <!--自定义全局text颜色-->
+        <attr name="colorTextPrimary" format="color|reference"></attr>
+        <!--自定义全局hint颜色-->
+        <attr name="colorHintPrimary" format="color|reference"></attr>
+    </declare-styleable>
+</resources>

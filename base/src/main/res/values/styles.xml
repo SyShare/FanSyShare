@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="toolbarStyle">@style/BaseToolbar</item>
+        <item name="tablayoutStyle">@style/BaseTablayout</item>
+        <item name="colorTextPrimary">?attr/colorTextPrimary</item>
+        <item name="colorHintPrimary">?attr/colorHintPrimary</item>
+    </style>
+
+    <style name="BaseToolbar" parent="@style/Base.Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="popupTheme">?attr/actionBarPopupTheme</item>
+        <item name="elevation">0dp</item>
+        <item name="subtitleTextAppearance">?attr/subtitleTextAppearance</item>
+        <item name="titleTextAppearance">?attr/titleTextAppearance</item>
+    </style>
+
+    <style name="BaseTablayout" parent="@style/Base.Widget.Design.TabLayout">
+        <item name="tabGravity">center</item>
+        <item name="tabIndicatorColor">?attr/colorPrimary</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabSelectedTextColor">?attr/tabSelectedTextColor</item>
+        <item name="tabTextAppearance">?attr/tabTextAppearance</item>
+    </style>
+</resources>

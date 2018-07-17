@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion depends.compileSdkVersion
+    buildToolsVersion depends.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion depends.minSdkVersion
+        targetSdkVersion depends.targetSdkVersion
+
+        versionCode 1
+        versionName "1.0.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api depends.appcompat_v7()
+    api depends.design()
+    api depends.constraintLayout()
+
+//    compileOnly depends.lib_util()
+//    compileOnly depends.lib_core()
+    implementation project(path: ':core')
+    implementation project(path: ':util')
+    api project(path: ':permission')
+
+    //Lifecycles
+    api "android.arch.lifecycle:runtime:1.1.1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    api "android.arch.lifecycle:common-java8:1.1.1"
+    //LiveData  ViewModel
+    api "android.arch.lifecycle:extensions:1.1.1"
+    testImplementation "android.arch.core:core-testing:1.1.1"
+    api "android.arch.lifecycle:reactivestreams:1.1.1"
+}
+
