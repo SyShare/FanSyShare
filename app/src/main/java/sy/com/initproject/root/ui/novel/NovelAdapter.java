@@ -50,7 +50,7 @@ public class NovelAdapter extends BaseCategoryAdapter<GirlBean, NovelAdapter.Gir
             Glide.with(mContext)
                     .load(item.getUrl())
                     .apply(new RequestOptions()
-                            .centerCrop()
+                            .fitCenter()
                             .error(R.drawable.ic_place_holder)
                             .placeholder(R.drawable.ic_place_holder)
                             .diskCacheStrategy(DiskCacheStrategy.ALL))

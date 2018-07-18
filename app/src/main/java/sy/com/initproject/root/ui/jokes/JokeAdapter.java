@@ -48,17 +48,17 @@ public class JokeAdapter extends BaseCategoryAdapter<JokeBean, JokeAdapter.JokeV
             binding.setBean(item);
             binding.executePendingBindings();
 
-            if(!TextUtils.isEmpty(item.getImage0())
-                    && item.getImage0().endsWith(".gif")){
+            if (!TextUtils.isEmpty(item.getImage0())
+                    && item.getImage0().endsWith(".gif")) {
                 binding.playIv.setVisibility(View.GONE);
-            }else{
+            } else {
                 binding.playIv.setVisibility(View.VISIBLE);
             }
 
             Glide.with(mContext)
                     .load(item.getImage0())
                     .apply(new RequestOptions()
-                            .centerCrop()
+                            .fitCenter()
                             .error(R.drawable.ic_place_holder)
                             .placeholder(R.drawable.ic_place_holder)
                             .diskCacheStrategy(DiskCacheStrategy.ALL))

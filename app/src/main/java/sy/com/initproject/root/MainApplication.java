@@ -2,6 +2,7 @@ package sy.com.initproject.root;
 
 import android.app.Application;
 
+import com.bumptech.glide.Glide;
 import com.pince.ut.constans.FileConstants;
 
 import sy.com.initproject.BuildConfig;
@@ -26,5 +27,12 @@ public class MainApplication extends Application {
                 .setLogEnable(!BuildConfig.BUILD_TYPE.equals("release"))
                 .retrofitBuilder("https://www.apiopen.top")
                 .build();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        Glide.get(AppContext.getContext()).clearDiskCache();
+        Glide.get(AppContext.getContext()).clearMemory();
     }
 }
