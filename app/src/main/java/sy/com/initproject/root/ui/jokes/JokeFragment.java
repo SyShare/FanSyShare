@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.player.VideoPlayerActivity;
 
 import java.util.ArrayList;
@@ -47,7 +46,7 @@ public class JokeFragment extends BaseCategoryRecyclerFragment<JokeBean, JokeAda
                 return;
             }
 
-            VideoPlayerActivity.open(getActivityContext(), bean.getVideouri(), bean.getName());
+            VideoPlayerActivity.open(getActivityContext(), bean.getVideouri(), bean.getName(), bean.getBimageuri());
         });
     }
 

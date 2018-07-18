@@ -1,6 +1,7 @@
 package sy.com.initproject.root.ui.jokes;
 
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.View;
 
 import com.bumptech.glide.Glide;
@@ -47,8 +48,15 @@ public class JokeAdapter extends BaseCategoryAdapter<JokeBean, JokeAdapter.JokeV
             binding.setBean(item);
             binding.executePendingBindings();
 
+            if(!TextUtils.isEmpty(item.getImage0())
+                    && item.getImage0().endsWith(".gif")){
+                binding.playIv.setVisibility(View.GONE);
+            }else{
+                binding.playIv.setVisibility(View.VISIBLE);
+            }
+
             Glide.with(mContext)
-                    .load(item.getBimageuri())
+                    .load(item.getImage0())
                     .apply(new RequestOptions()
                             .centerCrop()
                             .error(R.drawable.ic_place_holder)

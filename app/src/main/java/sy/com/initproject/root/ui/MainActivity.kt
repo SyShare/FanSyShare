@@ -1,5 +1,6 @@
 package sy.com.initproject.root.ui
 
+import android.app.DialogFragment
 import android.os.Bundle
 import android.view.View
 import com.pince.frame.BaseActivity
@@ -54,5 +55,5 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavFragmentKt.OnNaviga
             listener!!.onTabReselect()
         }
     }
-
+    
 }

@@ -66,6 +66,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation depends.appcompat_v7()
+    compileOnly project(':base')
     implementation 'cn.jzvd:jiaozivideoplayer:6.2.12'
 }
