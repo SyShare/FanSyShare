@@ -2,8 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <LinearLayout
-        android:id="@+id/activity_main_ui"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFF"
@@ -22,4 +22,5 @@
             android:layout_width="match_parent"
             android:layout_height="48dp" />
     </LinearLayout>
+
 </layout>

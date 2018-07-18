@@ -3,6 +3,7 @@ package sy.com.initproject.root.ui.category.base;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
@@ -19,6 +20,7 @@ import sy.com.initproject.R;
 import sy.com.initproject.databinding.FragmentBaseRecyclerViewBinding;
 import sy.com.initproject.root.interf.OnTabReselectListener;
 import sy.com.initproject.root.ui.category.adapter.BaseCategoryAdapter;
+import sy.com.initproject.root.utils.PaddingDecoration;
 import sy.com.initproject.root.utils.SpaceItemDecoration;
 import sy.com.initproject.root.widgets.EmptyCustomView;
 
@@ -88,6 +90,8 @@ public abstract class BaseCategoryRecyclerFragment<T, K extends BaseViewHolder> 
             mAdapter.setPreLoadNumber(getPreLoadNumber());
             mAdapter.setOnLoadMoreListener(this::loadMoreRequest, mBinding.recyclerView);
         }
+
+
     }
 
     @Override
@@ -207,7 +211,7 @@ public abstract class BaseCategoryRecyclerFragment<T, K extends BaseViewHolder> 
     protected abstract BaseCategoryAdapter<T, K> getRecyclerAdapter();
 
     protected RecyclerView.ItemDecoration getItemDecoration() {
-        return new SpaceItemDecoration(ViewUtil.dip2px(10), ViewUtil.dip2px(12), false);
+        return new PaddingDecoration(getActivityContext(), 56, 64);
     }
 
     /**
@@ -254,6 +258,6 @@ public abstract class BaseCategoryRecyclerFragment<T, K extends BaseViewHolder> 
      * @return
      */
     protected RecyclerView.LayoutManager getRecyclerViewLayoutManager() {
-        return new GridLayoutManager(getActivity(), 2);
+        return new LinearLayoutManager(getActivityContext());
     }
 }

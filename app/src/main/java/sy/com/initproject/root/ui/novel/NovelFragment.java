@@ -49,6 +49,7 @@ public class NovelFragment extends BaseCategoryRecyclerFragment<GirlBean, NovelA
                 startPictureActivity(bean, view);
             }
         });
+        mBinding.titleBar.titleTv.setText("美女专栏");
     }
 
     /**

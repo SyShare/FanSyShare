@@ -1,30 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data></data>
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/swipe_view"
+    <sy.com.initproject.root.widgets.NestScrollObserverLayout
+        android:id="@+id/nbl_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:animalChildLayout="@+id/title_bar">
 
-        <FrameLayout
-            android:id="@+id/layout_list_container"
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView"
+            <FrameLayout
+                android:id="@+id/layout_list_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scrollbars="vertical" />
+                android:background="@color/white"
+                android:orientation="vertical">
 
-            <sy.com.initproject.root.widgets.EmptyCustomView
-                android:id="@+id/error_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </FrameLayout>
-    </android.support.v4.widget.SwipeRefreshLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical" />
+
+                <sy.com.initproject.root.widgets.EmptyCustomView
+                    android:id="@+id/error_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/fragment_title_bar" />
+    </sy.com.initproject.root.widgets.NestScrollObserverLayout>
 </layout>

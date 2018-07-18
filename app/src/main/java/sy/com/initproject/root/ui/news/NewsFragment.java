@@ -17,6 +17,7 @@ import sy.com.initproject.R;
 import sy.com.initproject.databinding.FragmentBaseRecyclerViewBinding;
 import sy.com.initproject.root.interf.OnTabReselectListener;
 import sy.com.initproject.root.models.NewsBean;
+import sy.com.initproject.root.utils.PaddingDecoration;
 import sy.com.initproject.root.widgets.EmptyCustomView;
 import sy.com.lib_http.bean.BaseResponse;
 import viewmodel.HomeViewModel;
@@ -53,7 +54,9 @@ public class NewsFragment extends BaseMvpFragment<NewsPresenter, FragmentBaseRec
         mBinding.swipeView.setColorSchemeResources(R.color.blue_50, R.color.blue_100, R.color.red_50, R.color.red_100);
         mBinding.swipeView.setOnRefreshListener(this);
         delegateAdapter = presenter.initRecyclerView(mBinding.recyclerView);
+        mBinding.recyclerView.addItemDecoration(new PaddingDecoration(getActivityContext(), 56, 64));
         mBinding.recyclerView.setAdapter(delegateAdapter);
+        mBinding.titleBar.titleTv.setText("新闻资讯");
     }
 
     @Override

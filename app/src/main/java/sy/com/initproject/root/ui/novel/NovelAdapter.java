@@ -52,7 +52,8 @@ public class NovelAdapter extends BaseCategoryAdapter<GirlBean, NovelAdapter.Gir
                     .apply(new RequestOptions()
                             .centerCrop()
                             .error(R.drawable.ic_place_holder)
-                            .placeholder(R.drawable.ic_place_holder))
+                            .placeholder(R.drawable.ic_place_holder)
+                            .diskCacheStrategy(DiskCacheStrategy.ALL))
                     .thumbnail(0.1f)
                     .into(binding.coverIv);
         }

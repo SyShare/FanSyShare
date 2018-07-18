@@ -33,6 +33,7 @@ public class JokeFragment extends BaseCategoryRecyclerFragment<JokeBean, JokeAda
             }
             setData(listBaseResponse.getData());
         });
+        mBinding.titleBar.titleTv.setText("好评段子");
     }
 
     @Override

@@ -14,8 +14,16 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavFragmentKt.OnNaviga
 
     private var mNavBar: NavFragmentKt? = null
 
+    override fun isToolBarEnable(): Boolean {
+        return false
+    }
+
     override fun checkData(bundle: Bundle?): Boolean {
         return true
+    }
+
+    override fun homeAsUpEnable(): Boolean {
+        return false
     }
 
     override fun requestLayoutId(): Int {
