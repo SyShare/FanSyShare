@@ -55,5 +55,5 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavFragmentKt.OnNaviga
             listener!!.onTabReselect()
         }
     }
-    
+
 }
