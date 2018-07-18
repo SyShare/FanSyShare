@@ -7,6 +7,9 @@ import com.pince.ut.ViewUtil;
  * @author Administrator
  */
 public class Constant {
+
+    public static final int PAGE_SIZE = 20;
+
     public static final int MARGIN_LAY_1 = ViewUtil.dip2px(1);
     public static final int MARGIN_LAY_2 = ViewUtil.dip2px(2);
     public static final int MARGIN_LAY_5 = ViewUtil.dip2px(5);

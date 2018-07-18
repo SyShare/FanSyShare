@@ -174,7 +174,7 @@
     <style name="text_category_title">
         <item name="android:gravity">center</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@color/hd_home_list_title</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
 

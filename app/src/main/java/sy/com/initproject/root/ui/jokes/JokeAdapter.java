@@ -52,8 +52,7 @@ public class JokeAdapter extends BaseCategoryAdapter<JokeBean, JokeAdapter.JokeV
                     .apply(new RequestOptions()
                             .centerCrop()
                             .error(R.drawable.ic_place_holder)
-                            .placeholder(R.drawable.ic_place_holder)
-                            .diskCacheStrategy(DiskCacheStrategy.RESOURCE))
+                            .placeholder(R.drawable.ic_place_holder))
                     .thumbnail(0.1f)
                     .into(binding.coverIv);
         }

@@ -31,8 +31,8 @@ class NavigationButtonKt : FrameLayout {
 
 
     fun init(@DrawableRes resId: Int, @StringRes strId: Int, clx: Class<*>) {
-        binding.navIvIcon?.setImageResource(resId)
-        binding.navTvTitle?.setText(strId)
+        binding.navIvIcon.setImageResource(resId)
+        binding.navTvTitle.setText(strId)
         mClx = clx
         mTag = mClx?.getName()
     }

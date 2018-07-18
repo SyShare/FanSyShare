@@ -44,5 +44,10 @@ dependencies {
     api "android.arch.lifecycle:extensions:1.1.1"
     testImplementation "android.arch.core:core-testing:1.1.1"
     api "android.arch.lifecycle:reactivestreams:1.1.1"
+
+    api depends.glide()
+    //插件形式引用暂时有问题
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    api 'com.github.bumptech.glide:okhttp3-integration:4.7.1'
 }
 

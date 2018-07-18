@@ -2,6 +2,8 @@ package sy.com.initproject.root;
 
 import android.app.Application;
 
+import com.pince.ut.constans.FileConstants;
+
 import sy.com.initproject.BuildConfig;
 import sy.com.lib_http.RetrofitManager;
 
@@ -12,6 +14,7 @@ public class MainApplication extends Application {
         super.onCreate();
         AppContext.setContext(this);
         initNetwork();
+        FileConstants.initFileConfig(this);
     }
 
 

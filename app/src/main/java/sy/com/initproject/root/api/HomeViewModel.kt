@@ -6,6 +6,7 @@ import android.support.annotation.NonNull
 import com.baseproject.architecture.BaseLiveDataObserver
 import com.baseproject.architecture.BaseViewModel
 import sy.com.initproject.root.api.ApiService
+import sy.com.initproject.root.models.GirlBean
 import sy.com.initproject.root.models.JokeBean
 import sy.com.initproject.root.models.NewsBean
 import sy.com.lib_http.bean.BaseResponse
@@ -41,4 +42,14 @@ class HomeViewModel(@NonNull application: Application) : BaseViewModel<ApiServic
                 .subscribe(BaseLiveDataObserver(false, newsModel))
     }
 
+    /**
+     * 美女列表请求
+     */
+    val girlModel by lazy { MutableLiveData<BaseResponse<List<GirlBean>>>() }
+
+    fun getBeautyList(page: Int) {
+        mService.getBeautyList(page)
+                .doOnSubscribe { this.add(it) }
+                .subscribe(BaseLiveDataObserver(false, girlModel))
+    }
 }

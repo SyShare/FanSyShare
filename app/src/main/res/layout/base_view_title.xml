@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_root_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="48dp"
+    android:layout_margin="5dp">
 
 
     <TextView
@@ -13,24 +14,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/checkMore_tv"
-        android:layout_width="55dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/ic_home_more_bg"
-        android:gravity="center"
-        android:paddingBottom="1dp"
-        android:paddingLeft="6dp"
-        android:paddingRight="6dp"
-        android:paddingTop="1dp"
-        android:text="更多"
-        android:textColor="#724115"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

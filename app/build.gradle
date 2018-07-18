@@ -71,9 +71,9 @@ dependencies {
     //依赖库
     implementation depends.baseadapter()
     implementation depends.cardview_v7()
-    implementation depends.glide()
 
-   implementation ('com.alibaba.android:vlayout:1.2.8@aar'){
-       transitive = false
-   }
+    implementation 'com.github.chrisbanes.photoview:library:1.2.4'
+    implementation('com.alibaba.android:vlayout:1.2.8@aar') {
+        transitive = false
+    }
 }

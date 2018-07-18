@@ -16,6 +16,7 @@ import sy.com.initproject.databinding.FragmentHomeNavBinding
 import sy.com.initproject.root.ui.jokes.JokeFragment
 import sy.com.initproject.root.ui.mine.UserInfoFragment
 import sy.com.initproject.root.ui.news.NewsFragment
+import sy.com.initproject.root.ui.novel.NovelFragment
 
 class NavFragmentKt : BaseFragment<FragmentHomeNavBinding>(), View.OnClickListener {
 
@@ -38,7 +39,7 @@ class NavFragmentKt : BaseFragment<FragmentHomeNavBinding>(), View.OnClickListen
         val layerDrawable = LayerDrawable(arrayOf(ColorDrawable(resources.getColor(R.color.white)), lineDrawable))
         rootView?.setBackgroundDrawable(layerDrawable)
 
-//        mBinding.navItemExplore.setOnClickListener(this)
+        mBinding.navItemExplore.setOnClickListener(this)
         mBinding.navItemMe.setOnClickListener(this)
         mBinding.navItemNews.setOnClickListener(this)
         mBinding.navItemTweet.setOnClickListener(this)
@@ -53,9 +54,9 @@ class NavFragmentKt : BaseFragment<FragmentHomeNavBinding>(), View.OnClickListen
                 R.string.main_tab_name_jokes,
                 JokeFragment::class.java)
 
-//        mBinding.navItemExplore.init(R.drawable.tab_icon_explore,
-//                R.string.main_tab_name_novel,
-//                JokeFragment::class.java)
+        mBinding.navItemExplore.init(R.drawable.tab_icon_explore,
+                R.string.main_tab_name_novel,
+                NovelFragment::class.java)
 
         mBinding.navItemMe.init(R.drawable.tab_icon_me,
                 R.string.main_tab_name_my,

@@ -31,14 +31,18 @@ public class JokeFragment extends BaseCategoryRecyclerFragment<JokeBean, JokeAda
                 updateEmpty(false);
                 return;
             }
-            mAdapter.setNewData(listBaseResponse.getData());
-            updateEmpty(false);
+            setData(listBaseResponse.getData());
         });
     }
 
     @Override
     protected void requestData() {
         homeViewModel.getRecommondJokes(1);
+    }
+
+    @Override
+    protected void loadMoreRequest() {
+        homeViewModel.getRecommondJokes(pageNow);
     }
 
     @Override

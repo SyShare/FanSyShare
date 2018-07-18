@@ -6,7 +6,7 @@
     <string name="main_tab_name_news">新闻</string>
     <string name="main_tab_name_jokes">段子</string>
     <string name="main_tab_name_my">我的</string>
-    <string name="main_tab_name_novel">小说</string>
+    <string name="main_tab_name_novel">美女</string>
     <string name="list_empty">暂无数据</string>
 
 
@@ -17,4 +17,5 @@
     <string name="network_connected_mobile_alert">正在使用移动网络</string>
     <string name="blog">我的博客</string>
     <string name="github">Github地址</string>
+    <string name="ask_saving_picture">保存到手机?</string>
 </resources>

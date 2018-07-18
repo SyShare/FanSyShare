@@ -1,6 +1,7 @@
 package sy.com.initproject.root.ui.news;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 
@@ -59,15 +60,12 @@ public class NewsPresenter extends BaseMvpPresenter<IMainContact.IView> implemen
     public BaseDelegateAdapter initCommonTitle(String title) {
         LinearLayoutHelper linearLayoutHelper = new LinearLayoutHelper();
         linearLayoutHelper.setMargin(0, MARGIN_LAY_8, 0, 0);
-        linearLayoutHelper.setBgColor(0xfffffef3);
+        linearLayoutHelper.setBgColor(0xff432e2a);
         return new BaseDelegateAdapter(getActivityHandler().getActivityContext(), linearLayoutHelper, R.layout.base_view_title, 1, TYPE_TITLE) {
             @Override
             public void onBindViewHolder(BaseViewHolder holder, int position) {
                 super.onBindViewHolder(holder, position);
                 holder.setText(R.id.tv_title, title);
-                holder.getView(R.id.checkMore_tv).setOnClickListener(v -> {
-
-                });
             }
         };
     }
@@ -80,8 +78,10 @@ public class NewsPresenter extends BaseMvpPresenter<IMainContact.IView> implemen
             @Override
             public void onBindViewHolder(BaseViewHolder holder, int position) {
                 super.onBindViewHolder(holder, position);
-                NewsListItemBinding binding = NewsListItemBinding.bind(holder.itemView);
-                bindData(binding, teachList.get(position));
+                NewsListItemBinding binding = DataBindingUtil.bind(holder.itemView);
+                if (binding != null) {
+                    bindData(binding, teachList.get(position));
+                }
             }
         };
     }

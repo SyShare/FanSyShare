@@ -5,6 +5,7 @@ import java.util.List;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
+import sy.com.initproject.root.models.GirlBean;
 import sy.com.initproject.root.models.JokeBean;
 import sy.com.initproject.root.models.NewsBean;
 import sy.com.lib_http.bean.BaseResponse;
@@ -34,4 +35,12 @@ public interface ApiService {
      */
     @GET("/journalismApi")
     Observable<BaseResponse<NewsBean>> getNewsList();
+
+
+    /**
+     * 获取美女列表
+     * @return
+     */
+    @GET("/meituApi")
+    Observable<BaseResponse<List<GirlBean>>> getBeautyList(@Query("page") int page);
 }
