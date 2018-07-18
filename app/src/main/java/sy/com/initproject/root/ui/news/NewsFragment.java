@@ -17,6 +17,7 @@ import sy.com.initproject.R;
 import sy.com.initproject.databinding.FragmentBaseRecyclerViewBinding;
 import sy.com.initproject.root.interf.OnTabReselectListener;
 import sy.com.initproject.root.models.NewsBean;
+import sy.com.initproject.root.ui.web.WebActivity;
 import sy.com.initproject.root.utils.PaddingDecoration;
 import sy.com.initproject.root.widgets.EmptyCustomView;
 import sy.com.lib_http.bean.BaseResponse;
@@ -28,7 +29,8 @@ import viewmodel.ViewModelExtentionKt;
  *
  * @author SyShare
  */
-public class NewsFragment extends BaseMvpFragment<NewsPresenter, FragmentBaseRecyclerViewBinding> implements SwipeRefreshLayout.OnRefreshListener, OnTabReselectListener {
+public class NewsFragment extends BaseMvpFragment<NewsPresenter, FragmentBaseRecyclerViewBinding>
+        implements SwipeRefreshLayout.OnRefreshListener, OnTabReselectListener, IMainContact.IView {
 
 
     private HomeViewModel homeViewModel;
@@ -211,5 +213,10 @@ public class NewsFragment extends BaseMvpFragment<NewsPresenter, FragmentBaseRec
             return;
         }
         mBinding.errorLayout.setErrorType(EmptyCustomView.HIDE_LAYOUT);
+    }
+
+    @Override
+    public void jumpWeb(NewsBean.CommonBean bean) {
+        WebActivity.open(getActivityContext(), bean.getLink(), bean.getTitle());
     }
 }

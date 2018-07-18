@@ -19,6 +19,11 @@ public interface IMainContact {
 
     interface IView extends IBaseView {
 
+        /**
+         * 跳转WebView视图
+         * @param bean
+         */
+        void jumpWeb(NewsBean.CommonBean bean);
 
     }
 

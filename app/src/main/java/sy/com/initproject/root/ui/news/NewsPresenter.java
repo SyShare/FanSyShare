@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.alibaba.android.vlayout.DelegateAdapter;
 import com.alibaba.android.vlayout.VirtualLayoutManager;
@@ -104,6 +105,10 @@ public class NewsPresenter extends BaseMvpPresenter<IMainContact.IView> implemen
                         .diskCacheStrategy(DiskCacheStrategy.RESOURCE))
                 .thumbnail(0.1f)
                 .into(binding.coverIv);
-
+        binding.getRoot().setOnClickListener(v -> {
+            if (view != null) {
+                view.jumpWeb(item);
+            }
+        });
     }
 }

@@ -67,6 +67,7 @@ dependencies {
     implementation project(':logger')
     implementation project(':util')
     implementation project(':lib-http')
+    implementation project(':lib-player')
 
     //依赖库
     implementation depends.baseadapter()
@@ -77,4 +78,5 @@ dependencies {
         transitive = false
     }
     implementation depends.eventbus()
+
 }

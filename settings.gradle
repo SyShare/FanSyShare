@@ -1,4 +1,4 @@
-include ':app', ':permission', ':lib-http'
+include ':app', ':permission', ':lib-http', ':lib-player'
 include ':base'
 include ':core'
 include ':util'

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="sy.com.initproject">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:name=".root.MainApplication"
+        tools:replace="android:label,android:icon"
         android:theme="@style/AppTheme">
 
         <provider
@@ -41,6 +43,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".root.ui.preview.PictureActivity" />
+        <activity android:name=".root.ui.web.WebActivity" />
     </application>
 
 </manifest>
