@@ -35,8 +35,20 @@ android {
         multiDexEnabled true
     }
 
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
     dataBinding {
         enabled = true
+    }
+
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "6g"
+    }
+
+    lintOptions {
+        abortOnError false
     }
 
     compileOptions {//对lambda的支持
