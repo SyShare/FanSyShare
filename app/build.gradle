@@ -98,7 +98,7 @@ dependencies {
 def changeApkPath(String type, String buldType) {
     def timeNow = getDate()
     android.applicationVariants.all { variant ->
-            variant.outputs.each { output ->
+            variant.outputs.all { output ->
                 def newName
 
                 def outputFile = output.outputFile
