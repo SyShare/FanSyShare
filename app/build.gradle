@@ -111,7 +111,7 @@ def changeApkPath(String type, String buldType) {
     def timeNow = getDate()
     android.applicationVariants.all { variant ->
         variant.getPackageApplication().outputScope.apkDatas.forEach { apkData ->
-            variant.getPackageApplication().outputDirectory = new File("D:/tomcat/apache-tomcat-8.5.33-windows-x64/apache-tomcat-8.5.33/webapps/jenkins/apk")
+            variant.getPackageApplication().outputDirectory = new File(rootProject.rootDir.getAbsolutePath() + "/output/yxsj/" + APP_VERSION + "/" + type + "/" + timeNow)
             if ("true".equals(IS_JENKINS)) {
                 apkData.outputFileName = 'yj-android-v' +
                         APP_VERSION + '-' + variant.flavorName + timeNow + '-' + type + '.apk'
