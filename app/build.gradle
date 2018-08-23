@@ -57,7 +57,7 @@ android {
         release {
             debuggable false
             signingConfig signingConfigs.config
-            minifyEnabled false
+            minifyEnabled true
             buildConfigField "boolean", "LEO_DEBUG", RELEASE_LEO_DEBUG
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -106,7 +106,6 @@ def changeApkPath(String type, String buldType) {
                     def parentDir = "D:/tomcat/apache-tomcat-8.5.33-windows-x64/apache-tomcat-8.5.33/webapps/jenkins/apk"
                     println "applicationVariants buildType:" + variant.buildType.name
                     if ("true".equals(IS_JENKINS)) {
-                        outDirectory = 'D:/tomcat/apache-tomcat-8.5.33-windows-x64/apache-tomcat-8.5.33/webapps/jenkins/apk'
                         newName = 'yj-android-v' +
                                 APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
                     } else {
