@@ -4,6 +4,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'walle'
 apply plugin: 'com.jakewharton.hugo'
 
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmm')
+    return formattedDate
+}
+
 android {
 
     signingConfigs {
@@ -21,7 +27,8 @@ android {
         minSdkVersion depends.minSdkVersion
         targetSdkVersion depends.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName APP_VERSION
+        buildConfigField "boolean", "LEO_DEBUG", "true"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         signingConfig signingConfigs.config
@@ -42,6 +49,7 @@ android {
         debug {
             debuggable true
             minifyEnabled false
+            buildConfigField "boolean", "LEO_DEBUG", RELEASE_LEO_DEBUG
             signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -50,8 +58,10 @@ android {
             debuggable false
             signingConfig signingConfigs.config
             minifyEnabled false
+            buildConfigField "boolean", "LEO_DEBUG", RELEASE_LEO_DEBUG
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
     }
 }
 
@@ -79,4 +89,53 @@ dependencies {
     }
     implementation depends.eventbus()
 
+}
+
+/**
+ * 改变包路径
+ * @param type
+ */
+def changeApkPath(String type, String buldType) {
+    def timeNow = getDate()
+    android.applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                def newName
+
+                def outputFile = output.outputFile
+                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                    def parentDir = "D:/tomcat/apache-tomcat-8.5.33-windows-x64/apache-tomcat-8.5.33/webapps/jenkins/apk"
+                    println "applicationVariants buildType:" + variant.buildType.name
+                    if ("true".equals(IS_JENKINS)) {
+                        outDirectory = 'D:/tomcat/apache-tomcat-8.5.33-windows-x64/apache-tomcat-8.5.33/webapps/jenkins/apk'
+                        newName = 'yj-android-v' +
+                                APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
+                    } else {
+                        if (variant.buildType.name.equals('debug')) {
+                            newName = "yj-android-v${APP_VERSION}-debug.apk"
+                        } else {
+                            newName = 'yj-android-v' +
+                                    APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + variant.buildType.name + '.apk'
+                        }
+                    }
+                    output.outputFile = new File(parentDir, newName)
+                }
+            }
+        }
+}
+/**
+ * 编译测试任务
+ */
+task buildPublish(dependsOn: ['assembleRelease', 'generatepureDebugJavadoc']) {
+    dependsOn {
+        changeApkPath("publish", "release")
+    }
+}
+
+/**
+ * 编译Beta任务
+ */
+task buildBeta(dependsOn: 'assembleDebug') {
+    dependsOn {
+        changeApkPath("beta", "beta")
+    }
 }

@@ -3,14 +3,17 @@ package sy.com.initproject.root.ui.novel;
 import android.content.Intent;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import sy.com.initproject.root.models.GirlBean;
+import sy.com.initproject.root.models.JokeBean;
 import sy.com.initproject.root.ui.category.adapter.BaseCategoryAdapter;
 import sy.com.initproject.root.ui.category.base.BaseCategoryRecyclerFragment;
 import sy.com.initproject.root.ui.preview.PictureActivity;

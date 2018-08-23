@@ -8,6 +8,7 @@ import android.view.View;
 import com.player.VideoPlayerActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import sy.com.initproject.root.models.JokeBean;
 import sy.com.initproject.root.ui.category.adapter.BaseCategoryAdapter;
@@ -34,7 +35,8 @@ public class JokeFragment extends BaseCategoryRecyclerFragment<JokeBean, JokeAda
                 updateEmpty(false);
                 return;
             }
-            setData(listBaseResponse.getData());
+
+            setData(filter(listBaseResponse.getData()));
         });
         mBinding.titleBar.titleTv.setText("好评段子");
 
@@ -48,6 +50,15 @@ public class JokeFragment extends BaseCategoryRecyclerFragment<JokeBean, JokeAda
 
             VideoPlayerActivity.open(getActivityContext(), bean.getVideouri(), bean.getName(), bean.getBimageuri());
         });
+    }
+
+    private List<JokeBean> filter(List<JokeBean> datas) {
+//        for (JokeBean bean : datas) {
+//            if (TextUtils.isEmpty(bean.getVideouri())) {
+//                datas.remove(bean);
+//            }
+//        }
+        return datas;
     }
 
     @Override
