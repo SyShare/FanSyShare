@@ -102,13 +102,13 @@ def changeApkPath(String type, String buldType) {
             variant.getPackageApplication().outputDirectory = new File("D:/tomcat/apache-tomcat-8.5.33-windows-x64/apache-tomcat-8.5.33/webapps/jenkins/apk")
             if ("true".equals(IS_JENKINS)) {
                 apkData.outputFileName = 'yj-android-v' +
-                        APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + type + '.apk'
+                        APP_VERSION + '-' + variant.flavorName + timeNow + '-' + type + '.apk'
             } else {
                 if (variant.buildType.name.equals('debug')) {
                     apkData.outputFileName = "yj-android-v${APP_VERSION}-debug.apk"
                 } else {
                     apkData.outputFileName = 'yj-android-v' +
-                            APP_VERSION + '-' + variant.productFlavors[0].name + timeNow + '-' + type + '.apk'
+                            APP_VERSION + '-' + variant.flavorName + timeNow + '-' + type + '.apk'
                 }
             }
         }
