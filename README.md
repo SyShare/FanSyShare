@@ -1,5 +1,8 @@
 # FanSyShare
 第一个项目:
+![](./screenshot/img_0.jpg)
+
+
 该项目主要涉及的技术:
 
 >1、网络框架使用目前主流 : Retrofit2 + OkHttp + RxJava2  
