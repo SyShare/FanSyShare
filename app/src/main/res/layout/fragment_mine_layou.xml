@@ -1,76 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/activity_background"
-        android:fitsSystemWindows="false"
+        android:background="#D3D3D3"
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/rl_show_my_info"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimary"
             android:gravity="center"
             android:orientation="vertical"
-            android:paddingBottom="8dp">
+            skin:enable="true">
 
-            <ImageView
-                android:id="@+id/iv_portrait"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:src="@mipmap/luncher_icon" />
-
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/avastar"
+                app:border_color="#fff"
+                app:border_overlay="true"
+                app:border_width="2dp" />
 
             <TextView
-                android:id="@+id/tv_nick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:maxLines="1"
                 android:text="SyShare"
-                android:textColor="@color/color_444444"
-                android:textSize="20sp" />
-
+                android:textColor="#fff"
+                android:textSize="16sp" />
         </LinearLayout>
 
-        <LinearLayout style="@style/option_item_rl">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="应用介绍与帮助"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            skin:enable="true" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/blog" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:text="https://blog.csdn.net/syb001chen" />
-
-        </LinearLayout>
-
-        <LinearLayout style="@style/option_item_rl">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/github" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:text="https://github.com/SyShare" />
-
-        </LinearLayout>
-
-        <View
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="5dp"
-            android:background="#fe24cf5f" />
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@color/activity_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            skin:enable="true">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="@string/about_msg"
+                android:textColor="#262626"
+                android:textColorLink="@color/colorAccent"
+                android:textSize="14sp" />
+
+        </android.support.v7.widget.CardView>
     </LinearLayout>
 
 </layout>

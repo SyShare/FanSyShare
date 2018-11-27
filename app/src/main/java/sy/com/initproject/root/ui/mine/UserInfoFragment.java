@@ -1,6 +1,9 @@
 package sy.com.initproject.root.ui.mine;
 
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
+import android.widget.TextView;
 
 import com.pince.frame.BaseFragment;
 
@@ -20,6 +23,8 @@ public class UserInfoFragment extends BaseFragment<FragmentMineLayouBinding> {
 
     @Override
     protected void setViewData(Bundle savedInstanceState) {
-
+        mBinding.tvContent.setAutoLinkMask(Linkify.ALL);
+        mBinding.tvContent.setMovementMethod(LinkMovementMethod
+                .getInstance());
     }
 }

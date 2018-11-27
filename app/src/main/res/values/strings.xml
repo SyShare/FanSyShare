@@ -18,4 +18,15 @@
     <string name="blog">我的博客</string>
     <string name="github">Github地址</string>
     <string name="ask_saving_picture">保存到手机?</string>
+    <string name="about_msg">此应用是基于MD支持库开发的，内容涵盖Retrofit2.0+OkHttp+RxJava[ViewModel+LifeCycle组件]网络请求库,以及阿里的vlayout组件库支持，涵盖改造的皮肤框架等，具体可下载查看。
+    \n\n 作者:SyShare
+    \n\n CSDN主页 https://blog.csdn.net/syb001chen
+    \n\n GitHub主页 https://github.com/SyShare</string>
+
+    <string-array name="BannerList">
+        <item>http://cms-bucket.nosdn.127.net/2018/11/27/96fc8ccb25bf4af8969ce334fb6a1f46.jpg</item>
+        <item>http://7xi8d6.com1.z0.glb.clouddn.com/2017-11-17-22794158_128707347832045_9158114204975104000_n.jpg</item>
+        <item>http://cms-bucket.nosdn.127.net/2018/11/27/5cf6c562accd4a36b6fd778963e14122.jpeg</item>
+        <item>http://pic-bucket.nosdn.127.net/photo/0001/2018-11-27/E1K33IVV4T8E0001NOS.jpg</item>
+    </string-array>
 </resources>

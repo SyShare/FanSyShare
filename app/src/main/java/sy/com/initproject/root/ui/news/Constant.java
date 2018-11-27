@@ -22,14 +22,21 @@ public class Constant {
 
 
     public interface ViewType {
+
         /**
          * 列表
          */
-        int TYPE_LSIT = 1;
+        int TYPE_BANNER = 1;
+
         /**
-         * //标题
+         * 标题
          */
         int TYPE_TITLE = 2;
+
+        /**
+         * 列表
+         */
+        int TYPE_LIST = 3;
 
 
     }

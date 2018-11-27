@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog
 import android.text.TextUtils
 import android.view.View
 import com.bumptech.glide.Glide
+import com.github.chrisbanes.photoview.PhotoViewAttacher
 import com.pince.frame.BaseActivity
 import com.pince.ut.AppUtil
 import com.pince.ut.BitmapUtils
@@ -17,7 +18,6 @@ import rx.functions.Action1
 import rx.functions.Func1
 import sy.com.initproject.R
 import sy.com.initproject.databinding.ActivityPictureBinding
-import uk.co.senab.photoview.PhotoViewAttacher
 import java.io.File
 
 /**
@@ -103,6 +103,5 @@ class PictureActivity : BaseActivity<ActivityPictureBinding>() {
 
     override fun onDestroy() {
         super.onDestroy()
-        mPhotoViewAttacher?.cleanup()
     }
 }

@@ -15,6 +15,7 @@ import java.util.List;
 
 import sy.com.initproject.R;
 import sy.com.initproject.databinding.FragmentBaseRecyclerViewBinding;
+import sy.com.initproject.root.MainApplication;
 import sy.com.initproject.root.interf.OnTabReselectListener;
 import sy.com.initproject.root.models.NewsBean;
 import sy.com.initproject.root.ui.web.WebActivity;
@@ -112,6 +113,7 @@ public class NewsFragment extends BaseMvpFragment<NewsPresenter, FragmentBaseRec
      */
     private void updateHomeData(NewsBean response) {
         mAdapters.clear();
+        initBanner();
         initTeachAdapter(response.getTech());
         initCarsAdapter(response.getAuto());
         initMoneyAdapter(response.getMoney());
@@ -123,6 +125,11 @@ public class NewsFragment extends BaseMvpFragment<NewsPresenter, FragmentBaseRec
         delegateAdapter.setAdapters(mAdapters);
         delegateAdapter.notifyDataSetChanged();
         updateEmpty(false);
+    }
+
+
+    private void initBanner(){
+        mAdapters.add(presenter.initBanner(MainApplication.bannerList));
     }
 
     private void initEntAdapter(List<NewsBean.CommonBean> ent) {

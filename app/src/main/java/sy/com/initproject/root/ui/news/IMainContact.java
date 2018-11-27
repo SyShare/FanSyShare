@@ -37,6 +37,14 @@ public interface IMainContact {
         DelegateAdapter initRecyclerView(RecyclerView recyclerView);
 
         /**
+         * Banner
+         *
+         * @param stringList
+         * @return
+         */
+        BaseDelegateAdapter initBanner(List<String> stringList);
+
+        /**
          * 公共title
          *
          * @param title
