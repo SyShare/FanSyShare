@@ -10,6 +10,7 @@ import com.player.VideoPlayerActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import sy.com.initproject.R;
 import sy.com.initproject.root.models.JokeBean;
 import sy.com.initproject.root.ui.category.adapter.BaseCategoryAdapter;
 import sy.com.initproject.root.ui.category.base.BaseCategoryRecyclerFragment;
@@ -50,6 +51,7 @@ public class JokeFragment extends BaseCategoryRecyclerFragment<JokeBean, JokeAda
 
             VideoPlayerActivity.open(getActivityContext(), bean.getVideouri(), bean.getName(), bean.getBimageuri());
         });
+        dynamicAddSkinView(mBinding.titleBar.tabBar, "background", R.color.colorAccent);
     }
 
     private List<JokeBean> filter(List<JokeBean> datas) {

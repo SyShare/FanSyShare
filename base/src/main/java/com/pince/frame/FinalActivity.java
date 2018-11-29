@@ -27,13 +27,14 @@ import android.widget.Toast;
 import com.pince.core.IActivityHandler;
 import com.pince.ut.LogUtil;
 import com.pince.ut.SoftInputUtil;
+import com.youlu.skinloader.base.SkinBaseActivity;
 
 /**
  * 作者：CaiCai on 2016/6/17 11:44
  *
  * @author athoucai
  */
-public abstract class FinalActivity extends AppCompatActivity implements Toolbar.OnMenuItemClickListener
+public abstract class FinalActivity extends SkinBaseActivity implements Toolbar.OnMenuItemClickListener
         , IActivityHandler {
 
     /**

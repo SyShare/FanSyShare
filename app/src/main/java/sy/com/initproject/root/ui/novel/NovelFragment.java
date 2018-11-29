@@ -12,6 +12,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import sy.com.initproject.R;
 import sy.com.initproject.root.models.GirlBean;
 import sy.com.initproject.root.models.JokeBean;
 import sy.com.initproject.root.ui.category.adapter.BaseCategoryAdapter;
@@ -53,6 +54,7 @@ public class NovelFragment extends BaseCategoryRecyclerFragment<GirlBean, NovelA
             }
         });
         mBinding.titleBar.titleTv.setText("美女专栏");
+        dynamicAddSkinView(mBinding.titleBar.tabBar, "background", R.color.colorAccent);
     }
 
     /**

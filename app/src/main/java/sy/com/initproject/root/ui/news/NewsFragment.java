@@ -60,6 +60,7 @@ public class NewsFragment extends BaseMvpFragment<NewsPresenter, FragmentBaseRec
         mBinding.recyclerView.addItemDecoration(new PaddingDecoration(getActivityContext(), 56, 64));
         mBinding.recyclerView.setAdapter(delegateAdapter);
         mBinding.titleBar.titleTv.setText("新闻资讯");
+        dynamicAddSkinView(mBinding.titleBar.tabBar, "background", R.color.colorAccent);
     }
 
     @Override

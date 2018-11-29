@@ -6,6 +6,7 @@ import android.support.multidex.MultiDex;
 
 import com.bumptech.glide.Glide;
 import com.pince.ut.constans.FileConstants;
+import com.youlu.skinloader.base.SkinBaseApplication;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,7 +16,7 @@ import sy.com.initproject.BuildConfig;
 import sy.com.initproject.R;
 import sy.com.lib_http.RetrofitManager;
 
-public class MainApplication extends Application {
+public class MainApplication extends SkinBaseApplication {
 
 
     public static List<String> bannerList ;

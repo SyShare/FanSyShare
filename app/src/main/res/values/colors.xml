@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#259b24</color>
-    <color name="colorPrimaryDark">#056f00</color>
-    <color name="colorAccent">#75d572</color>
+
     <color name="statusBarColor">#01000000</color>
     <color name="themeStartColor">#f8c05a</color>
     <color name="themeEndColor">#f8c05a</color>
@@ -298,5 +296,6 @@
     <color name="live_hot_word_item_bg">#167bb3</color>
 
     <color name="color_BB0000000">#BB000000</color>
+    <color name="color_432">#432e2a</color>
 
 </resources>

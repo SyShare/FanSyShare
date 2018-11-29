@@ -2,7 +2,7 @@
 
     <style name="AppTheme.Transparent" parent="AppTheme">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="android:statusBarColor">@color/colorAccent</item>
     </style>
 
 </resources>

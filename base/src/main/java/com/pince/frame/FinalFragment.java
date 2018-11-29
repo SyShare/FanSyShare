@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,14 +13,14 @@ import android.view.Window;
 import com.pince.core.IActivityHandler;
 import com.pince.frame.helper.ViewFinder;
 import com.pince.ut.LogUtil;
+import com.youlu.skinloader.base.SkinBaseFragment;
 
 /**
- *
  * @author athou
  * @date 2016/9/25
  */
 
-public abstract class FinalFragment extends Fragment implements IActivityHandler {
+public abstract class FinalFragment extends SkinBaseFragment implements IActivityHandler {
 
     /*根布局*/
     protected View rootView = null;

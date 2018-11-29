@@ -1,18 +1,17 @@
 package com.youlu.skinloader.base;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.pince.ut.StatusBarUtil;
 import com.youlu.skinloader.attr.concrete.DynamicAttr;
 import com.youlu.skinloader.listener.IDynamicNewView;
 import com.youlu.skinloader.listener.ISkinUpdate;
 import com.youlu.skinloader.load.SkinInflaterFactory;
 import com.youlu.skinloader.load.SkinManager;
-import com.youlu.skinloader.statusbar.StatusBarBackground;
 
 import java.util.List;
 
@@ -42,8 +41,8 @@ public abstract class SkinBaseActivity extends AppCompatActivity implements ISki
 
     }
 
-    private void beforeCreate(){
-        if(!enableResponseOnSkin()){
+    private void beforeCreate() {
+        if (!enableResponseOnSkin()) {
             return;
         }
         mSkinInflaterFactory = new SkinInflaterFactory();
@@ -53,7 +52,7 @@ public abstract class SkinBaseActivity extends AppCompatActivity implements ISki
     @Override
     protected void onResume() {
         super.onResume();
-        if(!enableResponseOnSkin()){
+        if (!enableResponseOnSkin()) {
             return;
         }
         SkinManager.getInstance().attach(this);
@@ -62,7 +61,7 @@ public abstract class SkinBaseActivity extends AppCompatActivity implements ISki
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(!enableResponseOnSkin()){
+        if (!enableResponseOnSkin()) {
             return;
         }
         SkinManager.getInstance().detach(this);
@@ -72,7 +71,7 @@ public abstract class SkinBaseActivity extends AppCompatActivity implements ISki
     @Override
     public void onThemeUpdate() {
         Log.i("SkinBaseActivity", "onThemeUpdate");
-        if(!enableResponseOnSkin()){
+        if (!enableResponseOnSkin()) {
             return;
         }
         mSkinInflaterFactory.applySkin();
@@ -84,18 +83,11 @@ public abstract class SkinBaseActivity extends AppCompatActivity implements ISki
     }
 
     public void changeStatusColor() {
-        if(!enableResponseOnSkin()){
+        if (!enableResponseOnSkin()) {
             return;
         }
-        //如果当前的Android系统版本大于4.4则更改状态栏颜色
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Log.i("SkinBaseActivity", "changeStatus");
-            int color = SkinManager.getInstance().getColorPrimaryDark();
-            StatusBarBackground statusBarBackground = new StatusBarBackground(
-                    this, color);
-            if (color != -1)
-                statusBarBackground.setStatusBarbackColor();
-        }
+        int color = SkinManager.getInstance().getColorPrimaryDark();
+        StatusBarUtil.setColor(this, color);
     }
 
     @Override

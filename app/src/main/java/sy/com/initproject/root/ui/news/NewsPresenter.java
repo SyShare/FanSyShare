@@ -92,7 +92,6 @@ public class NewsPresenter extends BaseMvpPresenter<IMainContact.IView> implemen
     public BaseDelegateAdapter initCommonTitle(String title) {
         LinearLayoutHelper linearLayoutHelper = new LinearLayoutHelper();
         linearLayoutHelper.setMargin(0, MARGIN_LAY_8, 0, 0);
-        linearLayoutHelper.setBgColor(0xff432e2a);
         return new BaseDelegateAdapter(getActivityHandler().getActivityContext(), linearLayoutHelper, R.layout.base_view_title, 1, TYPE_TITLE) {
             @Override
             public void onBindViewHolder(BaseViewHolder holder, int position) {

@@ -99,10 +99,15 @@ class NavFragmentKt : BaseFragment<FragmentHomeNavBinding>(), View.OnClickListen
             transaction.commitNow()
     }
 
+
+    fun doSelectMine(){
+        doSelect(mBinding.navItemMe)
+    }
+
     /**
      * 选中
      */
-    private fun doSelect(newNavButton: NavigationButtonKt) {
+     private fun doSelect(newNavButton: NavigationButtonKt) {
         var oldNavButton: NavigationButtonKt? = null
         if (mCurrentNavButton != null) {
             oldNavButton = mCurrentNavButton

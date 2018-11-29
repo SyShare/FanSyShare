@@ -22,6 +22,7 @@
     \n\n 作者:SyShare
     \n\n CSDN主页 https://blog.csdn.net/syb001chen
     \n\n GitHub主页 https://github.com/SyShare</string>
+    <string name="home_btn_skin">换肤</string>
 
     <string-array name="BannerList">
         <item>http://cms-bucket.nosdn.127.net/2018/11/27/96fc8ccb25bf4af8969ce334fb6a1f46.jpg</item>

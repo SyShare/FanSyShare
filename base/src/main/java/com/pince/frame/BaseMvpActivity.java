@@ -51,6 +51,11 @@ public abstract class BaseMvpActivity<P extends BaseMvpPresenter, B extends View
         handleLifecycleEvent(Lifecycle.Event.ON_START);
     }
 
+    @Override
+    protected boolean enableResponseOnSkin() {
+        return true;
+    }
+
     public <T extends View> T findView(@IdRes int id) {
         return findViewById(id);
     }
