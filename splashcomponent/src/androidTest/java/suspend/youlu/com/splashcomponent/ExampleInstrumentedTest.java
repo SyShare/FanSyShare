@@ -1,4 +1,4 @@
-package sy.com.lib_player;
+package suspend.youlu.com.splashcomponent;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("sy.com.lib_player.test", appContext.getPackageName());
+        assertEquals("suspend.youlu.com.splashcomponent.test", appContext.getPackageName());
     }
 }

@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'walle'
 apply plugin: 'com.jakewharton.hugo'
+apply plugin: 'com.compnent'
 
 def getDate() {
     def date = new Date()
@@ -33,6 +34,12 @@ android {
 
         signingConfig signingConfigs.config
         multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     aaptOptions.cruncherEnabled = false
@@ -85,12 +92,7 @@ dependencies {
 
     //工具库
     implementation project(':base')
-    implementation project(':core')
-    implementation project(':logger')
-    implementation project(':util')
-    implementation project(':lib-http')
-    implementation project(':lib-player')
-    implementation project(':lib-skin')
+//    implementation project(path: ':lib-player')
 
     //依赖库
     implementation depends.baseadapter('2.9.40')
@@ -106,6 +108,8 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     //Banner
     implementation 'com.banner:banner:1.0'
+
+    annotationProcessor "com.alibaba:arouter-compiler:$arouter_compiler_version"
 }
 
 /**

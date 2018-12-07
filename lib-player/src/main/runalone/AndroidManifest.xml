@@ -1,15 +1,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.player">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
-        android:label="@string/player_app_name"
-        >
+        android:name="com.player.runalone.PlayerApplication"
+        android:label="@string/player_app_name_alone">
         <activity
             android:name="com.player.VideoPlayerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/player_AppTheme.FullScreen">
+
+        </activity>
+
+
+        <activity
+            android:name=".runalone.VideoTestActivity"
+            android:theme="@style/player_AppTheme.FullScreen">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

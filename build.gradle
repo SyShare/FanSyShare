@@ -3,13 +3,17 @@
 buildscript {
     ext.kotlin_version = '1.2.70'
     repositories {
+        google()
         jcenter()
         maven { url "https://jitpack.io" }
         mavenCentral()
         maven {
-            url  "https://dl.bintray.com/sharebysy/Depend"
+            url "https://dl.bintray.com/sharebysy/Depend"
         }
-        google()
+        maven {
+            url "https://dl.bintray.com/sharebysy/maven"
+        }
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
@@ -18,6 +22,8 @@ buildscript {
         classpath 'com.meituan.android.walle:plugin:1.1.6'
         //统一依赖插件
         classpath 'com.depend:depes:1.0.2'
+        //gradle 分包
+        classpath 'com.compnent:lib-component:1.3'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         //用于方便调试性能问题的打印插件。给访法加上@DebugLog，就能输出该方法的调用参数，以及执行时间
@@ -29,13 +35,17 @@ allprojects {
     apply plugin: 'com.depend'
 
     repositories {
+        google()
         jcenter()
         maven { url "https://jitpack.io" }
         mavenCentral()
         maven {
             url "https://dl.bintray.com/sharebysy/Depend"
         }
-        google()
+        maven {
+            url "https://dl.bintray.com/sharebysy/maven"
+        }
+
     }
 
     configurations.all {

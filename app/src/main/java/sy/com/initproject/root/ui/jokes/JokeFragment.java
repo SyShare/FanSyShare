@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.player.VideoPlayerActivity;
+import com.alibaba.android.arouter.launcher.ARouter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +49,11 @@ public class JokeFragment extends BaseCategoryRecyclerFragment<JokeBean, JokeAda
                 return;
             }
 
-            VideoPlayerActivity.open(getActivityContext(), bean.getVideouri(), bean.getName(), bean.getBimageuri());
+            ARouter.getInstance().build("/com/player")
+                    .withString("videoUrl", bean.getVideouri())
+                    .withString("extraTitle", bean.getName())
+                    .withString("thumb", bean.getBimageuri())
+                    .navigation();
         });
         dynamicAddSkinView(mBinding.titleBar.tabBar, "background", R.color.colorAccent);
     }

@@ -1,4 +1,4 @@
-package sy.com.lib_player;
+package suspend.youlu.com.splashcomponent;
 
 import org.junit.Test;
 

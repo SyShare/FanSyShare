@@ -10,6 +10,12 @@ android {
 
         versionCode 1
         versionName "1.0.1"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
     buildTypes {
         release {
@@ -30,10 +36,11 @@ dependencies {
     api depends.design()
     api depends.constraintLayout()
 
-//    compileOnly depends.lib_util()
-//    compileOnly depends.lib_core()
-    implementation project(path: ':core')
-    implementation project(path: ':util')
+    api project(path: ':logger')
+    api project(path: ':lib-http')
+    api project(path: ':lib-skin')
+    api project(path: ':core')
+    api project(path: ':util')
     api project(path: ':permission')
 
     //Lifecycles
@@ -49,6 +56,10 @@ dependencies {
     //插件形式引用暂时有问题
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
     api 'com.github.bumptech.glide:okhttp3-integration:4.7.1'
-    compile project(path: ':lib-skin')
+
+
+    //ARouter
+    api "com.alibaba:arouter-api:$arouter_api_version"
+    annotationProcessor "com.alibaba:arouter-compiler:$arouter_compiler_version"
 }
 

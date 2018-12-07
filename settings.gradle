@@ -1,4 +1,4 @@
-include ':app', ':permission', ':lib-http', ':lib-player', ':lib-skin'
+include ':app', ':permission', ':lib-http', ':lib-player', ':lib-skin', ':splashcomponent'
 include ':base'
 include ':core'
 include ':util'
