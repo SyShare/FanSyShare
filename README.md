@@ -8,7 +8,7 @@
 >1、网络框架使用目前主流 : [Retrofit2 + OkHttp + RxJava2][1]
 >2、项目基本架构为 MVP模式以及MVVM                          
 >3、[Android Jetpack组件（LiveData、ViewModel、DataBindin等）][2]                                    
->4、图片加载库目前使用的是glide。后期会扩展封装以支持随时切换
+>4、图片加载库目前使用的是glide。后期会扩展封装以支持随时切换    
 >5、动态请求库则是使用的[RxPermissions][3]库                           
 >6、目前项目使用的是语言是kotlin+Java,毕竟kotlin是Google的亲儿子嘛                                                  
 >7、列表展示则是采用了[BRVAH][4]库、电商类型的列表则是采用了阿里的[vlayout][5]库【不过在试用过程中碰到不少坑】
