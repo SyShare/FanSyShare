@@ -1,4 +1,4 @@
-package com.pince.network.util
+package sy.com.lib_http.util
 
 import java.lang.reflect.ParameterizedType
 

@@ -1,14 +1,13 @@
-package viewmodel
+package sy.com.initproject.root.api
 
 import android.app.Application
 import android.arch.lifecycle.MutableLiveData
 import android.support.annotation.NonNull
-import com.baseproject.architecture.BaseLiveDataObserver
-import com.baseproject.architecture.BaseViewModel
-import sy.com.initproject.root.api.ApiService
 import sy.com.initproject.root.models.GirlBean
 import sy.com.initproject.root.models.JokeBean
 import sy.com.initproject.root.models.NewsBean
+import sy.com.lib_http.arch.ApiObserver
+import sy.com.lib_http.arch.BaseViewModel
 import sy.com.lib_http.bean.BaseResponse
 
 /**
@@ -25,9 +24,20 @@ class HomeViewModel(@NonNull application: Application) : BaseViewModel<ApiServic
     val jokeModel by lazy { MutableLiveData<BaseResponse<List<JokeBean>>>() }
 
     fun getRecommondJokes(page: Int) {
-        mService.getNovelList(1, page)
+      return  mService.getNovelList(1, page)
                 .doOnSubscribe { this.add(it) }
-                .subscribe(BaseLiveDataObserver(false, jokeModel))
+                .subscribe(object : ApiObserver<BaseResponse<List<JokeBean>>>(){
+                    override fun onSuccess(resp: BaseResponse<List<JokeBean>>) {
+                        jokeModel.value = resp
+                    }
+
+                    override fun onFail(throwable: Throwable?) {
+                        super.onFail(throwable)
+                        jokeModel.value = null
+                    }
+
+
+                })
     }
 
 
@@ -39,7 +49,18 @@ class HomeViewModel(@NonNull application: Application) : BaseViewModel<ApiServic
     fun getRecommondNews() {
         mService.newsList
                 .doOnSubscribe { this.add(it) }
-                .subscribe(BaseLiveDataObserver(false, newsModel))
+                .subscribe(object : ApiObserver<BaseResponse<NewsBean>>(){
+                    override fun onSuccess(resp: BaseResponse<NewsBean>) {
+                        newsModel.value = resp
+                    }
+
+                    override fun onFail(throwable: Throwable?) {
+                        super.onFail(throwable)
+                        newsModel.value = null
+                    }
+
+
+                })
     }
 
     /**
@@ -50,6 +71,17 @@ class HomeViewModel(@NonNull application: Application) : BaseViewModel<ApiServic
     fun getBeautyList(page: Int) {
         mService.getBeautyList(page)
                 .doOnSubscribe { this.add(it) }
-                .subscribe(BaseLiveDataObserver(false, girlModel))
+                .subscribe(object : ApiObserver<BaseResponse<List<GirlBean>>>(){
+                    override fun onSuccess(resp: BaseResponse<List<GirlBean>>) {
+                        girlModel.value = resp
+                    }
+
+                    override fun onFail(throwable: Throwable?) {
+                        super.onFail(throwable)
+                        girlModel.value = null
+                    }
+
+
+                })
     }
 }

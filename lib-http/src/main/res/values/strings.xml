@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">lib-http</string>
+    <string name="http_toast_net_unavailable">当前网络不可用，请检查网络是否正常</string>
+    <string name="http_toast_service_busy">服务器繁忙，请稍后重试</string>
+    <string name="http_toast_service_connect_fail">连接服务器失败</string>
+    <string name="http_toast_response_time_out">响应超时</string>
+    <string name="http_toast_service_error">服务器可能休息去了，请稍后再试</string>
 </resources>

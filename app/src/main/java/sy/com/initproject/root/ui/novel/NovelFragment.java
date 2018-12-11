@@ -12,12 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sy.com.initproject.R;
+import sy.com.initproject.root.api.HomeViewModel;
 import sy.com.initproject.root.models.GirlBean;
 import sy.com.initproject.root.ui.category.adapter.BaseCategoryAdapter;
 import sy.com.initproject.root.ui.category.base.BaseCategoryRecyclerFragment;
 import sy.com.initproject.root.ui.preview.PictureActivity;
-import viewmodel.HomeViewModel;
-import viewmodel.ViewModelExtentionKt;
+import sy.com.lib_http.arch.ViewModelExtentionKt;
 
 /**
  * 美女tab

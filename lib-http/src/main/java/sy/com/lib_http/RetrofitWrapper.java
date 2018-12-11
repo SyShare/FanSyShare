@@ -8,7 +8,6 @@ import sy.com.lib_http.adapter.RxThreadCallAdapter;
 import sy.com.lib_http.converter.CustomConverterFactory;
 
 public class RetrofitWrapper {
-
     private static Retrofit retrofit;
 
     public RetrofitWrapper() {
@@ -48,4 +47,5 @@ public class RetrofitWrapper {
                     .build();
         }
     }
+
 }

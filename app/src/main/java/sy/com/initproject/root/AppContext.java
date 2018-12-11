@@ -4,14 +4,34 @@ import android.content.Context;
 
 public class AppContext {
 
-    private static Context context;
+    private Context context;
+    private boolean isNetWorkValid = true;
 
 
-    public static void setContext(Context context) {
-        AppContext.context = context;
+    private AppContext() {
     }
 
-    public static Context getContext() {
+    public static AppContext getInstance() {
+        return SingleHolder.INSTANCE_;
+    }
+
+    public Context getContext() {
         return context;
+    }
+
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
+    public void setNetWorkValid(boolean netWorkValid) {
+        isNetWorkValid = netWorkValid;
+    }
+
+    public boolean isNetWorkValid() {
+        return isNetWorkValid;
+    }
+
+    private static class SingleHolder {
+        private static final AppContext INSTANCE_ = new AppContext();
     }
 }

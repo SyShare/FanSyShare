@@ -1,12 +1,13 @@
 package sy.com.lib_http.bean;
 
+import sy.com.lib_http.util.ApiCodeUtil;
+
 /**
  * @Description:
  * @Data：2018/7/16-16:09
  * @author: SyShare
  */
 public class BaseResponse<T> {
-    private static final int SUCCESS_CODE = 200;
 
     private int code;
     private String msg;
@@ -38,7 +39,7 @@ public class BaseResponse<T> {
 
 
     public boolean isSuccessful() {
-        return code == SUCCESS_CODE;
+        return code == ApiCodeUtil.INSTANCE.getSUCCESS_CODE();
     }
 
 }

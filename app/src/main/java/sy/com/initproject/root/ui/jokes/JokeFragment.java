@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sy.com.initproject.R;
+import sy.com.initproject.root.api.HomeViewModel;
 import sy.com.initproject.root.models.JokeBean;
 import sy.com.initproject.root.ui.category.adapter.BaseCategoryAdapter;
 import sy.com.initproject.root.ui.category.base.BaseCategoryRecyclerFragment;
-import viewmodel.HomeViewModel;
-import viewmodel.ViewModelExtentionKt;
+import sy.com.lib_http.arch.ViewModelExtentionKt;
 
 /**
  * 热门段子tab

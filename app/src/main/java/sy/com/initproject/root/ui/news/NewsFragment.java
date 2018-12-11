@@ -16,14 +16,14 @@ import java.util.List;
 import sy.com.initproject.R;
 import sy.com.initproject.databinding.FragmentBaseRecyclerViewBinding;
 import sy.com.initproject.root.MainApplication;
+import sy.com.initproject.root.api.HomeViewModel;
 import sy.com.initproject.root.interf.OnTabReselectListener;
 import sy.com.initproject.root.models.NewsBean;
 import sy.com.initproject.root.ui.web.WebActivity;
 import sy.com.initproject.root.utils.PaddingDecoration;
 import sy.com.initproject.root.widgets.EmptyCustomView;
+import sy.com.lib_http.arch.ViewModelExtentionKt;
 import sy.com.lib_http.bean.BaseResponse;
-import viewmodel.HomeViewModel;
-import viewmodel.ViewModelExtentionKt;
 
 /**
  * 热门段子tab
@@ -76,12 +76,7 @@ public class NewsFragment extends BaseMvpFragment<NewsPresenter, FragmentBaseRec
                 }
             }
         });
-        homeViewModel.getDataErrorObserver().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                updateEmpty(true);
-            }
-        });
+
         requestData();
     }
 
@@ -129,7 +124,7 @@ public class NewsFragment extends BaseMvpFragment<NewsPresenter, FragmentBaseRec
     }
 
 
-    private void initBanner(){
+    private void initBanner() {
         mAdapters.add(presenter.initBanner(MainApplication.bannerList));
     }
 

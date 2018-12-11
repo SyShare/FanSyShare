@@ -1,4 +1,4 @@
-package viewmodel
+package sy.com.lib_http.arch
 
 import android.arch.lifecycle.*
 import android.support.v4.app.Fragment

@@ -39,6 +39,7 @@ dependencies {
     api depends.okhttp_log()
     api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 
-
+     implementation   "android.arch.lifecycle:extensions:1.1.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(path: ':util')
 }

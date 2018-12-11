@@ -3,18 +3,23 @@ package sy.com.initproject.root;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.bumptech.glide.Glide;
 import com.pince.frame.AbstractBaseApplication;
 import com.pince.frame.helper.ScreenManager;
 import com.pince.ut.constans.FileConstants;
+import com.youlu.http.interceptor.CacheNetworkInterceptor;
+import sy.com.initproject.root.interceptor.LoggingInterceptor;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import okhttp3.Cache;
 import sy.com.initproject.BuildConfig;
 import sy.com.initproject.R;
+import sy.com.initproject.root.interceptor.CacheInterceptor;
+import sy.com.lib_http.ApiException;
 import sy.com.lib_http.RetrofitManager;
 
 public class MainApplication extends AbstractBaseApplication {
@@ -25,7 +30,7 @@ public class MainApplication extends AbstractBaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        AppContext.setContext(this);
+        AppContext.getInstance().setContext(this);
         initNetwork();
         FileConstants.initFileConfig(this);
         ScreenManager.getInstance().init(this);
@@ -54,6 +59,19 @@ public class MainApplication extends AbstractBaseApplication {
     private void initNetwork() {
         RetrofitManager.okHttpBuilder(this)
                 .setLogEnable(!BuildConfig.BUILD_TYPE.equals("release"))
+                .setSuccessCode(200)
+                .enableCache(true)
+                .cacheSize(new Cache(new File(getExternalCacheDir(), "ok-cache"), 1024 * 1024 * 30L))
+                .addNormalInterceptor(new CacheInterceptor())
+                .addInterceptor(new CacheNetworkInterceptor())
+                .addInterceptor(new LoggingInterceptor())
+                .addErrorHandler(throwable -> {
+                    if (throwable instanceof ApiException) {
+                        ApiException apiException = (ApiException) throwable;
+
+                    }
+
+                })
                 .retrofitBuilder("https://www.apiopen.top")
                 .build();
     }
@@ -61,7 +79,7 @@ public class MainApplication extends AbstractBaseApplication {
     @Override
     public void onLowMemory() {
         super.onLowMemory();
-        Glide.get(AppContext.getContext()).clearDiskCache();
-        Glide.get(AppContext.getContext()).clearMemory();
+        Glide.get(AppContext.getInstance().getContext()).clearDiskCache();
+        Glide.get(AppContext.getInstance().getContext()).clearMemory();
     }
 }

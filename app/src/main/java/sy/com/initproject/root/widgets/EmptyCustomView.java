@@ -157,7 +157,7 @@ public class EmptyCustomView extends LinearLayout implements View.OnClickListene
         if (clickEnable) {
             if (mErrorState == NETWORK_ERROR) {
 
-                Toast.makeText(AppContext.getContext(), "TODO, Network Settings", Toast.LENGTH_LONG).show();
+                Toast.makeText(AppContext.getInstance().getContext(), "TODO, Network Settings", Toast.LENGTH_LONG).show();
                 //SystemSettingsUtils.launchWirelessSettings(getContext(), true);
                 return;
             }

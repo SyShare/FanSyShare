@@ -1,12 +1,10 @@
-package com.baseproject.architecture
+package sy.com.lib_http.arch
 
 import android.app.Application
 import android.arch.lifecycle.AndroidViewModel
-import android.arch.lifecycle.MutableLiveData
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import sy.com.lib_http.RetrofitManager
-import viewmodel.findParamsTypeClass
 
 /**
  * 拓展dataError和dataEmpty两个字段
@@ -16,14 +14,10 @@ import viewmodel.findParamsTypeClass
 abstract class BaseViewModel<T>(application: Application) : AndroidViewModel(application) {
 
     public val mService: T
-    var dataErrorObserver: MutableLiveData<String>
-    var dataEmptyObserver: MutableLiveData<Boolean>
     private var disposables: CompositeDisposable? = null
 
     init {
         mService = RetrofitManager.getService(findParamsTypeClass(javaClass)) as T
-        dataEmptyObserver = MutableLiveData()
-        dataErrorObserver = MutableLiveData()
     }
 
     fun add(o: Any) {
