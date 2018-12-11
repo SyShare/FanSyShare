@@ -36,7 +36,8 @@
             android:name="android.max_aspect"
             android:value="2.34" />
 
-        <activity android:name=".root.ui.MainActivity">
+        <activity android:name=".root.ui.MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

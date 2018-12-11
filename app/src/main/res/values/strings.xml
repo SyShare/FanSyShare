@@ -4,7 +4,7 @@
 
     <!--首页tab-->
     <string name="main_tab_name_news">新闻</string>
-    <string name="main_tab_name_jokes">段子</string>
+    <string name="main_tab_name_jokes">视频</string>
     <string name="main_tab_name_my">我的</string>
     <string name="main_tab_name_novel">美女</string>
     <string name="list_empty">暂无数据</string>

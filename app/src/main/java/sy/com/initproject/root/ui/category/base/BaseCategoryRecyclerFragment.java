@@ -38,7 +38,7 @@ public abstract class BaseCategoryRecyclerFragment<T, K extends BaseViewHolder> 
     /**
      * 当前页数
      */
-    public int pageNow = 1;
+    public int pageNow = 2;
     /**
      * 是否正在刷新
      */
@@ -101,14 +101,14 @@ public abstract class BaseCategoryRecyclerFragment<T, K extends BaseViewHolder> 
 
     @Override
     public void onRefresh() {
-        pageNow = 1;
+        pageNow = 2;
         isRefreshing = true;
         requestData();
     }
 
     @Override
     public void onTabReselect() {
-        pageNow = 1;
+        pageNow = 2;
         mBinding.swipeView.setRefreshing(true);
         onRefresh();
     }
@@ -134,7 +134,7 @@ public abstract class BaseCategoryRecyclerFragment<T, K extends BaseViewHolder> 
         if (mAdapter == null) {
             return;
         }
-        if (pageNow == 1) {
+        if (pageNow == 2) {
             mAdapter.setNewData(data);
         } else {
             mAdapter.addData(data);

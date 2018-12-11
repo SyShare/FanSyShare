@@ -78,7 +78,7 @@ public class NovelFragment extends BaseCategoryRecyclerFragment<GirlBean, NovelA
 
     @Override
     protected void requestData() {
-        homeViewModel.getBeautyList(1);
+        homeViewModel.getBeautyList(2);
     }
 
     @Override
