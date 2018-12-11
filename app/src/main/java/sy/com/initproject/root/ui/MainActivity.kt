@@ -1,11 +1,14 @@
 package sy.com.initproject.root.ui
 
-import android.app.DialogFragment
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import android.view.WindowManager
 import com.pince.frame.BaseActivity
 import com.pince.permission.PermissionCallback
+import sy.com.initproject.root.lockscreenad.LockScreenService
 import sy.com.initproject.R
 import sy.com.initproject.databinding.ActivityMainBinding
 import sy.com.initproject.root.interf.OnTabReselectListener
@@ -20,6 +23,17 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavFragmentKt.OnNaviga
 
     private var mNavBar: NavFragmentKt? = null
 
+
+    override fun changeTheme() {
+        super.changeTheme()
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+    }
+    companion object {
+        @JvmStatic
+        fun open(context: Context){
+            context.startActivity(Intent(context,MainActivity::class.java))
+        }
+    }
 
     override fun checkData(bundle: Bundle?): Boolean {
         return true
@@ -44,9 +58,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavFragmentKt.OnNaviga
         mNavBar = manager.findFragmentById(R.id.fag_nav) as NavFragmentKt
         mNavBar?.setup(this, manager, R.id.main_container, this)
 
-        mBinding.btnSkin.setOnClickListener{
-         SkinActivity.open(activityContext)
+        mBinding.btnSkin.setOnClickListener {
+            SkinActivity.open(activityContext)
         }
+
+        registerBroadCast()
     }
 
     override fun setViewData(savedInstanceState: Bundle?) {
@@ -57,7 +73,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavFragmentKt.OnNaviga
         })
     }
 
-
     override fun onReselect(navigationButton: NavigationButtonKt) {
         val fragment = navigationButton.getFragment()
         if (fragment != null && fragment is OnTabReselectListener) {
@@ -67,16 +82,22 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavFragmentKt.OnNaviga
     }
 
 
+    private fun registerBroadCast() {
+        val intent = Intent()
+        intent.action = LockScreenService.LOCK_SCREEN_ACTION
+        sendBroadcast(intent)
+    }
+
     override fun requestMenuId(): Int {
         return R.menu.menu_main_toolbar
     }
 
 
     override fun onMenuItemClick(item: MenuItem?): Boolean {
-        if(item?.itemId == R.id.action_skin){
+        if (item?.itemId == R.id.action_skin) {
             SkinActivity.open(activityContext)
             return true
-        }else if(item?.itemId == R.id.action_about){
+        } else if (item?.itemId == R.id.action_about) {
             mNavBar?.doSelectMine()
             return true
         }

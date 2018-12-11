@@ -6,6 +6,7 @@ import android.support.multidex.MultiDex;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.bumptech.glide.Glide;
 import com.pince.frame.AbstractBaseApplication;
+import com.pince.frame.helper.ScreenManager;
 import com.pince.ut.constans.FileConstants;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class MainApplication extends AbstractBaseApplication {
         AppContext.setContext(this);
         initNetwork();
         FileConstants.initFileConfig(this);
-
+        ScreenManager.getInstance().init(this);
         String[] strings = getResources().getStringArray(R.array.BannerList);
         bannerList = new ArrayList<>(Arrays.asList(strings));
     }
