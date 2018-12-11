@@ -3,7 +3,6 @@ package sy.com.initproject.root.ui.novel;
 import android.content.Intent;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -14,7 +13,6 @@ import java.util.List;
 
 import sy.com.initproject.R;
 import sy.com.initproject.root.models.GirlBean;
-import sy.com.initproject.root.models.JokeBean;
 import sy.com.initproject.root.ui.category.adapter.BaseCategoryAdapter;
 import sy.com.initproject.root.ui.category.base.BaseCategoryRecyclerFragment;
 import sy.com.initproject.root.ui.preview.PictureActivity;
@@ -50,7 +48,7 @@ public class NovelFragment extends BaseCategoryRecyclerFragment<GirlBean, NovelA
                 if (bean == null || !(view instanceof ImageView)) {
                     return;
                 }
-                startPictureActivity(bean, view);
+                startPictureActivity(bean, view, mAdapter.getData());
             }
         });
         mBinding.titleBar.titleTv.setText("美女专栏");
@@ -63,8 +61,8 @@ public class NovelFragment extends BaseCategoryRecyclerFragment<GirlBean, NovelA
      * @param bean
      * @param transitView
      */
-    private void startPictureActivity(GirlBean bean, View transitView) {
-        Intent intent = PictureActivity.newIntent(getActivityContext(), bean.getUrl(), bean.getType());
+    private void startPictureActivity(GirlBean bean, View transitView, List<GirlBean> list) {
+        Intent intent = PictureActivity.newIntent(getActivityContext(), bean.getUrl(), bean.getType(), list);
         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 getActivityContext(), transitView, PictureActivity.TRANSIT_PIC);
         try {

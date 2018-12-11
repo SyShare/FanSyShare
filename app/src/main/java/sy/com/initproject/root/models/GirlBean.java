@@ -1,10 +1,12 @@
 package sy.com.initproject.root.models;
 
+import java.io.Serializable;
+
 /**
  * @date：2018/7/18
  * @author: SyShare
  */
-public class GirlBean {
+public class GirlBean implements Serializable{
 
 
     /**
