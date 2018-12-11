@@ -14,7 +14,7 @@ class CacheNetworkInterceptor : Interceptor {
         return chain.proceed(chain.request())
                 .newBuilder()
                 .removeHeader("Pragma")
-                .addHeader("Cache-Control", "max-age=60")
+                .addHeader("Cache-Control", "max-age=300")
                 .build()
     }
 }

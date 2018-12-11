@@ -20,7 +20,7 @@ class CacheInterceptor() : Interceptor {
 
 
         if (AppContext.getInstance().isNetWorkValid) {
-            //有网络时检查最近的60秒缓存
+            //有网络时检查最近的300秒缓存
             request = chain.request().also {
                 it.newBuilder()
                         .cacheControl(CacheControl.Builder()
