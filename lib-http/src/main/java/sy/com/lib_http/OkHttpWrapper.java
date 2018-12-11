@@ -125,13 +125,17 @@ public class OkHttpWrapper {
             return this;
         }
 
-        public Builder addInterceptor(Interceptor interceptor) {
-            clientBuilder.addNetworkInterceptor(interceptor);
+        public Builder addNetWorkInterceptor(Interceptor... interceptors) {
+            for (Interceptor interceptor : interceptors) {
+                clientBuilder.addNetworkInterceptor(interceptor);
+            }
             return this;
         }
 
-        public Builder addNormalInterceptor(Interceptor interceptor) {
-            clientBuilder.addInterceptor(interceptor);
+        public Builder addNormalInterceptor(Interceptor... interceptors) {
+            for (Interceptor interceptor : interceptors) {
+                clientBuilder.addInterceptor(interceptor);
+            }
             return this;
         }
 

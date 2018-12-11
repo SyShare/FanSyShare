@@ -63,8 +63,7 @@ public class MainApplication extends AbstractBaseApplication {
                 .enableCache(true)
                 .cacheSize(new Cache(new File(getExternalCacheDir(), "ok-cache"), 1024 * 1024 * 30L))
                 .addNormalInterceptor(new CacheInterceptor())
-                .addInterceptor(new CacheNetworkInterceptor())
-                .addInterceptor(new LoggingInterceptor())
+                .addNetWorkInterceptor(new CacheNetworkInterceptor(),new LoggingInterceptor())
                 .addErrorHandler(throwable -> {
                     if (throwable instanceof ApiException) {
                         ApiException apiException = (ApiException) throwable;
