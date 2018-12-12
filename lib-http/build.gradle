@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+
 android {
     compileSdkVersion depends.compileSdkVersion
 
@@ -10,9 +11,10 @@ android {
         targetSdkVersion depends.targetSdkVersion
         versionCode 1
         versionName "1.0"
+    }
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+    lintOptions{
+        abortOnError false
     }
 
     buildTypes {
@@ -39,7 +41,9 @@ dependencies {
     api depends.okhttp_log()
     api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 
-     implementation   "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation project(path: ':util')
 }
+
+apply from: '../bintray.gradle'

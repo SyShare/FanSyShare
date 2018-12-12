@@ -61,5 +61,7 @@ dependencies {
     //ARouter
     api "com.alibaba:arouter-api:$arouter_api_version"
     annotationProcessor "com.alibaba:arouter-compiler:$arouter_compiler_version"
+
+    api "com.google.code.findbugs:jsr305:3.0.2"
 }
 

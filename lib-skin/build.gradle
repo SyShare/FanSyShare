@@ -31,7 +31,7 @@ dependencies {
     implementation depends.rxandroid2()
     implementation depends.rxjava2()
 
-    compile project(path: ':util')
+    implementation project(path: ':util')
 }
 repositories {
     mavenCentral()

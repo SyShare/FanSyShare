@@ -46,9 +46,8 @@ public class OkHttpWrapper {
     }
 
     /**
-     * 对错误信息处理后的提示
-     *
-     * @param throwable 错误类型
+     * exceptionMsg to toast
+     * @param throwable error
      */
     public static void toastError(Context context, Throwable throwable) {
         if (context == null) {
@@ -85,19 +84,19 @@ public class OkHttpWrapper {
         private OkHttpClient client;
         private OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
         /**
-         * 日志拦截器
+         * loggerInterceptor
          */
         private HttpLoggingInterceptor logInterceptor = new HttpLoggingInterceptor();
         /**
-         * 拦截错误集合
+         * errors handle list
          */
         private List<ApiErrorHandler> errorHandlers;
         /**
-         * 链接超时时间
+         * max connectionTime
          */
         private long connectTimeOut = 4 * 1000L;
         /**
-         * 读写超时时间
+         * max readTime
          */
         private long readTimeout = 4 * 1000L;
 
@@ -165,9 +164,8 @@ public class OkHttpWrapper {
         }
 
         /**
-         * 添加通用Api错误处理
-         *
-         * @param errorHandler 错误回调
+         * custom errorHandle
+         * @param errorHandler single errorHandleCallBack
          */
         public Builder addErrorHandler(ApiErrorHandler errorHandler) {
             this.errorHandlers.add(errorHandler);
@@ -186,9 +184,8 @@ public class OkHttpWrapper {
         public interface ApiErrorHandler {
 
             /**
-             * 处理错误回调实现
-             *
-             * @param throwable 异常
+             * errorHandle method
+             * @param throwable exception
              */
             void handleError(Throwable throwable);
         }

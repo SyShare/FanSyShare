@@ -29,6 +29,9 @@ buildscript {
         // in the individual module build.gradle files
         //用于方便调试性能问题的打印插件。给访法加上@DebugLog，就能输出该方法的调用参数，以及执行时间
         classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
+        //upload jcenter
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
@@ -70,6 +73,26 @@ allprojects {
             force 'android.arch.lifecycle:viewmodel:1.1.1'
         }
     }
+}
+
+ext {
+    userOrg = 'sharebysy'
+    groupId = 'com.syshare'
+    uploadName = 'MPermission'
+    publishVersion = '1.0.9'
+    desc = 'Project for self learning '
+    website = 'https://github.com/SyShare/FanSyShare.git'
+    licences = ['Apache-2.0']
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+    options.warnings = false
+}
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
 }
 
 task clean(type: Delete) {

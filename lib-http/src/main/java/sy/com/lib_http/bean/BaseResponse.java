@@ -4,7 +4,6 @@ import sy.com.lib_http.util.ApiCodeUtil;
 
 /**
  * @Description:
- * @Data：2018/7/16-16:09
  * @author: SyShare
  */
 public class BaseResponse<T> {

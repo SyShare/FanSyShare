@@ -38,19 +38,16 @@ public abstract class ApiObserver<T> extends DisposableObserver<T> implements Li
     }
 
     /**
-     * 适用于P层页面销毁时，自动释放资源
-     * 目前MVP基础架构已做修改，在P层也可以使用ViewModel
-     *
-     * @param mLifecycle
+     * used to be MVP
+     * @param mLifecycle life
      */
     public ApiObserver(@NonNull Lifecycle mLifecycle) {
         this(false, mLifecycle);
     }
 
     /**
-     * 适用于ViewMdodel形式
-     *
-     * @param viewModel
+     *used to br ViewModel
+     * @param viewModel AndroidViewModel
      */
     public ApiObserver(@NonNull BaseViewModel viewModel) {
         this(false, viewModel);
