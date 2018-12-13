@@ -31,8 +31,10 @@ dependencies {
     implementation depends.rxandroid2()
     implementation depends.rxjava2()
 
-    implementation project(path: ':util')
+    implementation "com.syshare:util:1.0.0"
+
 }
 repositories {
     mavenCentral()
 }
+apply from: '../bintray.gradle'

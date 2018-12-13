@@ -24,3 +24,4 @@ dependencies {
 //    api 'com.elvishew:xlog:1.4.0'
     api 'com.orhanobut:logger:2.2.0'
 }
+//apply from: '../bintray.gradle'

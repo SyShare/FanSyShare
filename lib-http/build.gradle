@@ -43,7 +43,7 @@ dependencies {
 
     implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation project(path: ':util')
+    implementation "com.syshare:util:1.0.0"
 }
 
-apply from: '../bintray.gradle'
+//apply from: '../bintray.gradle'

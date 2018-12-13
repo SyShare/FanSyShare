@@ -32,3 +32,6 @@ dependencies {
 //    compileOnly depends.rxbinding1()
     compileOnly depends.rxandroid1()
 }
+
+
+//apply from: '../bintray.gradle'

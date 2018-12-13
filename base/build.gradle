@@ -32,16 +32,22 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    //网络库
+    api "com.syshare:lib-http:1.0.1"
+    //日志库
+    api "com.syshare:logger:1.0.0"
+    //权限库
+    api "com.syshare:permission:1.0.0"
+    //工具
+    api "com.syshare:util:1.0.0"
+    //core
+    api "com.syshare:core:1.0.0"
+    //skin
+    api "com.syshare:lib-skin:1.0.0"
+
     api depends.appcompat_v7()
     api depends.design()
     api depends.constraintLayout()
-
-    api project(path: ':logger')
-    api project(path: ':lib-http')
-    api project(path: ':lib-skin')
-    api project(path: ':core')
-    api project(path: ':util')
-    api project(path: ':permission')
 
     //Lifecycles
     api "android.arch.lifecycle:runtime:1.1.1"
